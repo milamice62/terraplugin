@@ -3,7 +3,7 @@ package provider
 import (
 	"github.com/hashicorp/terraform/helper/schema"
 	"github.com/hashicorp/terraform/terraform"
-	"github.com/spaceapegames/terraform-provider-example/api/client"
+	"github.com/milamice62/terraplugin/api/client"
 )
 
 func Provider() terraform.ResourceProvider {
@@ -26,7 +26,8 @@ func Provider() terraform.ResourceProvider {
 			},
 		},
 		ResourcesMap: map[string]*schema.Resource{
-			"example_item": resourceItem(),
+			"movie_item":   resourceItem(),
+			"movie_genres": genreItem(),
 		},
 		ConfigureFunc: providerConfigure,
 	}
