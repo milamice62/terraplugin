@@ -20,6 +20,7 @@ type Client struct {
 
 type Genre struct {
 	Name string `json:"name"`
+	ID   string `json:"_id"`
 }
 
 // NewClient returns a new client configured to communicate on a server with the
@@ -35,7 +36,7 @@ func NewClient(hostname string, port int, token string) *Client {
 }
 
 // GetAll Retrieves all of the Items from the server
-func (c *Client) GetAll() (*map[string]server.Item, error) {
+func (c *Client) GetAllGenres() (*map[string]server.Item, error) {
 	body, err := c.httpRequest("item", "GET", bytes.Buffer{})
 	if err != nil {
 		return nil, err
@@ -49,8 +50,8 @@ func (c *Client) GetAll() (*map[string]server.Item, error) {
 }
 
 // GetItem gets an item with a specific name from the server
-func (c *Client) GetGenre(genreName string) (*Genre, error) {
-	body, err := c.httpRequest(fmt.Sprintf("api/genres/%s", genreName), "GET", bytes.Buffer{})
+func (c *Client) GetGenre(genreID string) (*Genre, error) {
+	body, err := c.httpRequest(fmt.Sprintf("api/genres/%s", genreID), "GET", bytes.Buffer{})
 	if err != nil {
 		return nil, err
 	}
@@ -63,27 +64,27 @@ func (c *Client) GetGenre(genreName string) (*Genre, error) {
 }
 
 // create new genre
-func (c *Client) NewGenre(genre *Genre) error {
+func (c *Client) NewGenre(genre *Genre) (io.ReadCloser, error) {
+	buf := bytes.Buffer{}
+	err := json.NewEncoder(&buf).Encode(genre)
+	if err != nil {
+		return nil, err
+	}
+	resBody, err := c.httpRequest("api/genres", "POST", buf)
+	if err != nil {
+		return nil, err
+	}
+	return resBody, nil
+}
+
+// UpdateItem updates the values of an item
+func (c *Client) UpdateGenre(genre *Genre) error {
 	buf := bytes.Buffer{}
 	err := json.NewEncoder(&buf).Encode(genre)
 	if err != nil {
 		return err
 	}
-	_, err = c.httpRequest("api/genres", "POST", buf)
-	if err != nil {
-		return err
-	}
-	return nil
-}
-
-// UpdateItem updates the values of an item
-func (c *Client) UpdateItem(item *server.Item) error {
-	buf := bytes.Buffer{}
-	err := json.NewEncoder(&buf).Encode(item)
-	if err != nil {
-		return err
-	}
-	_, err = c.httpRequest(fmt.Sprintf("item/%s", item.Name), "PUT", buf)
+	_, err = c.httpRequest(fmt.Sprintf("api/genres/%s", genre.Name), "PUT", buf)
 	if err != nil {
 		return err
 	}
@@ -91,8 +92,8 @@ func (c *Client) UpdateItem(item *server.Item) error {
 }
 
 // DeleteItem removes an item from the server
-func (c *Client) DeleteGenre(genreName string) error {
-	_, err := c.httpRequest(fmt.Sprintf("api/genres/%s", genreName), "DELETE", bytes.Buffer{})
+func (c *Client) DeleteGenre(genreID string) error {
+	_, err := c.httpRequest(fmt.Sprintf("api/genres/%s", genreID), "DELETE", bytes.Buffer{})
 	if err != nil {
 		return err
 	}
@@ -104,7 +105,7 @@ func (c *Client) httpRequest(path, method string, body bytes.Buffer) (closer io.
 	if err != nil {
 		return nil, err
 	}
-	req.Header.Add("Authorization", c.authToken)
+	req.Header.Add("x-auth-token", c.authToken)
 	switch method {
 	case "GET":
 	case "DELETE":

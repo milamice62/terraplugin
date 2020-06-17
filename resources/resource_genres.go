@@ -1,6 +1,7 @@
-package provider
+package resources
 
 import (
+	"encoding/json"
 	"fmt"
 	"strings"
 
@@ -8,14 +9,14 @@ import (
 	"github.com/milamice62/terraplugin/api/client"
 )
 
-func genreItem() *schema.Resource {
+func GenreItem() *schema.Resource {
 	fmt.Print()
 	return &schema.Resource{
 		Schema: map[string]*schema.Schema{
 			"name": {
 				Type:         schema.TypeString,
 				Required:     true,
-				Description:  "The name of the genre, also acts as it's unique ID",
+				Description:  "The name of the genre",
 				ForceNew:     true,
 				ValidateFunc: validateName,
 			},
@@ -23,6 +24,7 @@ func genreItem() *schema.Resource {
 		Create: createGenre,
 		Read:   readGenre,
 		Delete: deleteGenre,
+		Exists: existGenre,
 		Importer: &schema.ResourceImporter{
 			State: schema.ImportStatePassthrough,
 		},
@@ -36,39 +38,62 @@ func createGenre(d *schema.ResourceData, m interface{}) error {
 		Name: d.Get("name").(string),
 	}
 
-	err := apiClient.NewGenre(&genre)
+	resBody, err := apiClient.NewGenre(&genre)
 
 	if err != nil {
 		return err
 	}
-	d.SetId(genre.Name)
+
+	err = json.NewDecoder(resBody).Decode(&genre)
+	if err != nil {
+		return err
+	}
+
+	d.SetId(genre.ID)
 	return nil
 }
 
 func readGenre(d *schema.ResourceData, m interface{}) error {
 	apiClient := m.(*client.Client)
 
-	genreName := d.Id()
-	genre, err := apiClient.GetGenre(genreName)
+	genreID := d.Id()
+	genre, err := apiClient.GetGenre(genreID)
 	if err != nil {
 		if strings.Contains(err.Error(), "not found") {
 			d.SetId("")
 		} else {
-			return fmt.Errorf("error finding Genre with name %s", genreName)
+			return fmt.Errorf("error finding Genre with name %s", genreID)
 		}
 	}
 
-	d.SetId(genre.Name)
-	d.Set("name", genre.Name)
+	d.SetId(genre.ID)
+	if d.Set("name", genre.Name); err != nil {
+		return err
+	}
 	return nil
+}
+
+func existGenre(d *schema.ResourceData, m interface{}) (bool, error) {
+	apiClient := m.(*client.Client)
+
+	genreID := d.Id()
+	_, err := apiClient.GetGenre(genreID)
+	if err != nil {
+		if strings.Contains(err.Error(), "not found") {
+			return false, nil
+		} else {
+			return false, err
+		}
+	}
+	return true, nil
 }
 
 func deleteGenre(d *schema.ResourceData, m interface{}) error {
 	apiClient := m.(*client.Client)
 
-	genreName := d.Id()
+	genreID := d.Id()
 
-	err := apiClient.DeleteGenre(genreName)
+	err := apiClient.DeleteGenre(genreID)
 	if err != nil {
 		return err
 	}

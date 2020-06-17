@@ -1,853 +1,851 @@
-2020/06/09 02:32:40 [INFO] Terraform version: 0.12.8  
-2020/06/09 02:32:40 [INFO] Go runtime version: go1.12.9
-2020/06/09 02:32:40 [INFO] CLI args: []string{"/usr/local/bin/terraform", "apply"}
-2020/06/09 02:32:40 [DEBUG] Attempting to open CLI config file: /Users/chrisy/.terraformrc
-2020/06/09 02:32:40 Loading CLI configuration from /Users/chrisy/.terraformrc
-2020/06/09 02:32:40 [INFO] CLI command args: []string{"apply"}
-2020/06/09 02:32:40 [TRACE] Meta.Backend: no config given or present on disk, so returning nil config
-2020/06/09 02:32:40 [TRACE] Meta.Backend: backend has not previously been initialized in this working directory
-2020/06/09 02:32:40 [DEBUG] New state was assigned lineage "4399fc13-e94f-d3e2-bd3a-67879a636b33"
-2020/06/09 02:32:40 [TRACE] Meta.Backend: using default local state only (no backend configuration, and no existing initialized backend)
-2020/06/09 02:32:40 [TRACE] Meta.Backend: instantiated backend of type <nil>
-2020/06/09 02:32:40 [DEBUG] checking for provider in "."
-2020/06/09 02:32:40 [WARN] found legacy provider "terraform-provider-movie"
-2020/06/09 02:32:40 [DEBUG] checking for provider in "/usr/local/bin"
-2020/06/09 02:32:40 [DEBUG] checking for provider in ".terraform/plugins/darwin_amd64"
-2020/06/09 02:32:40 [DEBUG] found valid plugin: "movie", "0.0.0", "/Users/chrisy/Documents/GO/terraplugin/terraform-provider-movie"
-2020/06/09 02:32:40 [DEBUG] checking for provisioner in "."
-2020/06/09 02:32:40 [DEBUG] checking for provisioner in "/usr/local/bin"
-2020/06/09 02:32:40 [DEBUG] checking for provisioner in ".terraform/plugins/darwin_amd64"
-2020/06/09 02:32:40 [TRACE] Meta.Backend: backend <nil> does not support operations, so wrapping it in a local backend
-2020/06/09 02:32:40 [INFO] backend/local: starting Apply operation
-2020/06/09 02:32:40 [TRACE] backend/local: requesting state manager for workspace "default"
-2020/06/09 02:32:40 [TRACE] backend/local: state manager for workspace "default" will:
+2020/06/15 02:10:09 [INFO] Terraform version: 0.12.8  
+2020/06/15 02:10:09 [INFO] Go runtime version: go1.12.9
+2020/06/15 02:10:09 [INFO] CLI args: []string{"/usr/local/bin/terraform", "apply"}
+2020/06/15 02:10:09 [DEBUG] Attempting to open CLI config file: /Users/chrisy/.terraformrc
+2020/06/15 02:10:09 Loading CLI configuration from /Users/chrisy/.terraformrc
+2020/06/15 02:10:09 [INFO] CLI command args: []string{"apply"}
+2020/06/15 02:10:09 [TRACE] Meta.Backend: no config given or present on disk, so returning nil config
+2020/06/15 02:10:09 [TRACE] Meta.Backend: backend has not previously been initialized in this working directory
+2020/06/15 02:10:09 [DEBUG] New state was assigned lineage "25af12d7-1720-27f6-38d0-1b505110e1e5"
+2020/06/15 02:10:09 [TRACE] Meta.Backend: using default local state only (no backend configuration, and no existing initialized backend)
+2020/06/15 02:10:09 [TRACE] Meta.Backend: instantiated backend of type <nil>
+2020/06/15 02:10:09 [DEBUG] checking for provider in "."
+2020/06/15 02:10:09 [WARN] found legacy provider "terraform-provider-store"
+2020/06/15 02:10:09 [DEBUG] checking for provider in "/usr/local/bin"
+2020/06/15 02:10:09 [DEBUG] checking for provider in ".terraform/plugins/darwin_amd64"
+2020/06/15 02:10:09 [DEBUG] found valid plugin: "store", "0.0.0", "/Users/chrisy/Documents/GO/terraplugin/terraform-provider-store"
+2020/06/15 02:10:09 [DEBUG] checking for provisioner in "."
+2020/06/15 02:10:09 [DEBUG] checking for provisioner in "/usr/local/bin"
+2020/06/15 02:10:09 [DEBUG] checking for provisioner in ".terraform/plugins/darwin_amd64"
+2020/06/15 02:10:09 [TRACE] Meta.Backend: backend <nil> does not support operations, so wrapping it in a local backend
+2020/06/15 02:10:09 [INFO] backend/local: starting Apply operation
+2020/06/15 02:10:09 [TRACE] backend/local: requesting state manager for workspace "default"
+2020/06/15 02:10:09 [TRACE] backend/local: state manager for workspace "default" will:
  - read initial snapshot from terraform.tfstate
  - write new snapshots to terraform.tfstate
  - create any backup at terraform.tfstate.backup
-2020/06/09 02:32:40 [TRACE] backend/local: requesting state lock for workspace "default"
-2020/06/09 02:32:40 [TRACE] statemgr.Filesystem: preparing to manage state snapshots at terraform.tfstate
-2020/06/09 02:32:40 [TRACE] statemgr.Filesystem: no previously-stored snapshot exists
-2020/06/09 02:32:40 [TRACE] statemgr.Filesystem: locking terraform.tfstate using fcntl flock
-2020/06/09 02:32:40 [TRACE] statemgr.Filesystem: writing lock metadata to .terraform.tfstate.lock.info
-2020/06/09 02:32:40 [TRACE] backend/local: reading remote state for workspace "default"
-2020/06/09 02:32:40 [TRACE] statemgr.Filesystem: reading latest snapshot from terraform.tfstate
-2020/06/09 02:32:40 [TRACE] statemgr.Filesystem: snapshot file has nil snapshot, but that's okay
-2020/06/09 02:32:40 [TRACE] statemgr.Filesystem: read nil snapshot
-2020/06/09 02:32:40 [TRACE] backend/local: retrieving local state snapshot for workspace "default"
-2020/06/09 02:32:40 [TRACE] backend/local: building context for current working directory
-2020/06/09 02:32:40 [TRACE] terraform.NewContext: starting
-2020/06/09 02:32:40 [TRACE] terraform.NewContext: resolving provider version selections
-2020/06/09 02:32:40 [TRACE] terraform.NewContext: loading provider schemas
-2020/06/09 02:32:40 [TRACE] LoadSchemas: retrieving schema for provider type "movie"
-2020-06-09T02:32:40.351-0400 [INFO]  plugin: configuring client automatic mTLS
-2020-06-09T02:32:40.397-0400 [DEBUG] plugin: starting plugin: path=/Users/chrisy/Documents/GO/terraplugin/terraform-provider-movie args=[/Users/chrisy/Documents/GO/terraplugin/terraform-provider-movie]
-2020-06-09T02:32:40.402-0400 [DEBUG] plugin: plugin started: path=/Users/chrisy/Documents/GO/terraplugin/terraform-provider-movie pid=35481
-2020-06-09T02:32:40.402-0400 [DEBUG] plugin: waiting for RPC address: path=/Users/chrisy/Documents/GO/terraplugin/terraform-provider-movie
-2020-06-09T02:32:40.433-0400 [INFO]  plugin.terraform-provider-movie: configuring server automatic mTLS: timestamp=2020-06-09T02:32:40.432-0400
-2020-06-09T02:32:40.479-0400 [DEBUG] plugin: using plugin: version=5
-2020-06-09T02:32:40.479-0400 [DEBUG] plugin.terraform-provider-movie: plugin address: network=unix address=/var/folders/5k/01p9rr_x4194p99qtvgt_bxr0000gn/T/plugin632894660 timestamp=2020-06-09T02:32:40.479-0400
-2020/06/09 02:32:40 [TRACE] GRPCProvider: GetSchema
-2020/06/09 02:32:40 [TRACE] GRPCProvider: Close
-2020-06-09T02:32:40.578-0400 [DEBUG] plugin: plugin process exited: path=/Users/chrisy/Documents/GO/terraplugin/terraform-provider-movie pid=35481
-2020-06-09T02:32:40.578-0400 [DEBUG] plugin: plugin exited
-2020/06/09 02:32:40 [TRACE] terraform.NewContext: complete
-2020/06/09 02:32:40 [TRACE] backend/local: finished building terraform.Context
-2020/06/09 02:32:40 [TRACE] backend/local: requesting interactive input, if necessary
-2020/06/09 02:32:40 [TRACE] Context.Input: Prompting for variables
-2020/06/09 02:32:40 [TRACE] Context.Input: Prompting for provider arguments
-2020/06/09 02:32:40 [TRACE] Context.Input: Provider provider.movie declared at main.tf:1,1-17
-2020/06/09 02:32:40 [TRACE] Context.Input: Input for provider.movie: map[string]cty.Value{}
-2020/06/09 02:32:40 [TRACE] backend/local: running validation operation
-2020/06/09 02:32:40 [INFO] terraform: building graph: GraphTypeValidate
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.ConfigTransformer
-2020/06/09 02:32:40 [TRACE] ConfigTransformer: Starting for path: 
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
-movie_store.comedy - *terraform.NodeValidatableResource
+2020/06/15 02:10:09 [TRACE] backend/local: requesting state lock for workspace "default"
+2020/06/15 02:10:09 [TRACE] statemgr.Filesystem: preparing to manage state snapshots at terraform.tfstate
+2020/06/15 02:10:09 [TRACE] statemgr.Filesystem: existing snapshot has lineage "fa68f1ab-1b7f-ec7e-3f22-f1b5641f1fe8" serial 1
+2020/06/15 02:10:09 [TRACE] statemgr.Filesystem: locking terraform.tfstate using fcntl flock
+2020/06/15 02:10:09 [TRACE] statemgr.Filesystem: writing lock metadata to .terraform.tfstate.lock.info
+2020/06/15 02:10:09 [TRACE] backend/local: reading remote state for workspace "default"
+2020/06/15 02:10:09 [TRACE] statemgr.Filesystem: reading latest snapshot from terraform.tfstate
+2020/06/15 02:10:09 [TRACE] statemgr.Filesystem: read snapshot with lineage "fa68f1ab-1b7f-ec7e-3f22-f1b5641f1fe8" serial 1
+2020/06/15 02:10:09 [TRACE] backend/local: retrieving local state snapshot for workspace "default"
+2020/06/15 02:10:09 [TRACE] backend/local: building context for current working directory
+2020/06/15 02:10:09 [TRACE] terraform.NewContext: starting
+2020/06/15 02:10:09 [TRACE] terraform.NewContext: resolving provider version selections
+2020/06/15 02:10:09 [TRACE] terraform.NewContext: loading provider schemas
+2020/06/15 02:10:09 [TRACE] LoadSchemas: retrieving schema for provider type "store"
+2020-06-15T02:10:09.559-0400 [INFO]  plugin: configuring client automatic mTLS
+2020-06-15T02:10:09.582-0400 [DEBUG] plugin: starting plugin: path=/Users/chrisy/Documents/GO/terraplugin/terraform-provider-store args=[/Users/chrisy/Documents/GO/terraplugin/terraform-provider-store]
+2020-06-15T02:10:09.585-0400 [DEBUG] plugin: plugin started: path=/Users/chrisy/Documents/GO/terraplugin/terraform-provider-store pid=91407
+2020-06-15T02:10:09.585-0400 [DEBUG] plugin: waiting for RPC address: path=/Users/chrisy/Documents/GO/terraplugin/terraform-provider-store
+2020-06-15T02:10:09.600-0400 [INFO]  plugin.terraform-provider-store: configuring server automatic mTLS: timestamp=2020-06-15T02:10:09.600-0400
+2020-06-15T02:10:09.624-0400 [DEBUG] plugin: using plugin: version=5
+2020-06-15T02:10:09.624-0400 [DEBUG] plugin.terraform-provider-store: plugin address: address=/var/folders/5k/01p9rr_x4194p99qtvgt_bxr0000gn/T/plugin208263370 network=unix timestamp=2020-06-15T02:10:09.624-0400
+2020/06/15 02:10:09 [TRACE] GRPCProvider: GetSchema
+2020/06/15 02:10:09 [TRACE] GRPCProvider: Close
+2020-06-15T02:10:09.674-0400 [DEBUG] plugin: plugin process exited: path=/Users/chrisy/Documents/GO/terraplugin/terraform-provider-store pid=91407
+2020-06-15T02:10:09.674-0400 [DEBUG] plugin: plugin exited
+2020/06/15 02:10:09 [TRACE] terraform.NewContext: complete
+2020/06/15 02:10:09 [TRACE] backend/local: finished building terraform.Context
+2020/06/15 02:10:09 [TRACE] backend/local: requesting interactive input, if necessary
+2020/06/15 02:10:09 [TRACE] Context.Input: Prompting for variables
+2020/06/15 02:10:09 [TRACE] Context.Input: Prompting for provider arguments
+2020/06/15 02:10:09 [TRACE] Context.Input: Provider provider.store declared at main.tf:1,1-17
+2020/06/15 02:10:09 [TRACE] Context.Input: Input for provider.store: map[string]cty.Value{}
+2020/06/15 02:10:09 [TRACE] backend/local: running validation operation
+2020/06/15 02:10:09 [INFO] terraform: building graph: GraphTypeValidate
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/06/15 02:10:09 [TRACE] ConfigTransformer: Starting for path: 
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+store_movies.saw - *terraform.NodeValidatableResource
 ------
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.LocalTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.OutputTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.StateTransformer
-2020/06/09 02:32:40 [TRACE] StateTransformer: state is empty, so nothing to do
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
-2020/06/09 02:32:40 [TRACE] AttachResourceConfigTransformer: attaching to "movie_store.comedy" (*terraform.NodeValidatableResource) config from main.tf:7,1-32
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.AttachStateTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.RootVariableTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.graphTransformerMulti
-2020/06/09 02:32:40 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
-2020/06/09 02:32:40 [TRACE] ProviderConfigTransformer: attaching to "provider.movie" provider configuration from main.tf:1,1-17
-2020/06/09 02:32:40 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
-movie_store.comedy - *terraform.NodeValidatableResource
-provider.movie - *terraform.NodeApplyableProvider
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.LocalTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.OutputTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.StateTransformer
+2020/06/15 02:10:09 [TRACE] StateTransformer: state is empty, so nothing to do
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2020/06/15 02:10:09 [TRACE] AttachResourceConfigTransformer: attaching to "store_movies.saw" (*terraform.NodeValidatableResource) config from main.tf:11,1-30
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2020/06/15 02:10:09 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2020/06/15 02:10:09 [TRACE] ProviderConfigTransformer: attaching to "provider.store" provider configuration from main.tf:1,1-17
+2020/06/15 02:10:09 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+provider.store - *terraform.NodeApplyableProvider
+store_movies.saw - *terraform.NodeValidatableResource
 ------
-2020/06/09 02:32:40 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
-2020/06/09 02:32:40 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
-2020/06/09 02:32:40 [TRACE] ProviderTransformer: movie_store.comedy is provided by provider.movie or inherited equivalent
-2020/06/09 02:32:40 [TRACE] ProviderTransformer: exact match for provider.movie serving movie_store.comedy
-2020/06/09 02:32:40 [DEBUG] ProviderTransformer: "movie_store.comedy" (*terraform.NodeValidatableResource) needs provider.movie
-2020/06/09 02:32:40 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
-movie_store.comedy - *terraform.NodeValidatableResource
-  provider.movie - *terraform.NodeApplyableProvider
-provider.movie - *terraform.NodeApplyableProvider
+2020/06/15 02:10:09 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2020/06/15 02:10:09 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2020/06/15 02:10:09 [TRACE] ProviderTransformer: store_movies.saw is provided by provider.store or inherited equivalent
+2020/06/15 02:10:09 [TRACE] ProviderTransformer: exact match for provider.store serving store_movies.saw
+2020/06/15 02:10:09 [DEBUG] ProviderTransformer: "store_movies.saw" (*terraform.NodeValidatableResource) needs provider.store
+2020/06/15 02:10:09 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+provider.store - *terraform.NodeApplyableProvider
+store_movies.saw - *terraform.NodeValidatableResource
+  provider.store - *terraform.NodeApplyableProvider
 ------
-2020/06/09 02:32:40 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
-2020/06/09 02:32:40 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
-2020/06/09 02:32:40 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
-movie_store.comedy - *terraform.NodeValidatableResource
-  provider.movie - *terraform.NodeApplyableProvider
-provider.movie - *terraform.NodeApplyableProvider
+2020/06/15 02:10:09 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2020/06/15 02:10:09 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2020/06/15 02:10:09 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+provider.store - *terraform.NodeApplyableProvider
+store_movies.saw - *terraform.NodeValidatableResource
+  provider.store - *terraform.NodeApplyableProvider
 ------
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
-2020/06/09 02:32:40 [TRACE] AttachSchemaTransformer: attaching resource schema to movie_store.comedy
-2020/06/09 02:32:40 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider.movie
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.ReferenceTransformer
-2020/06/09 02:32:40 [DEBUG] ReferenceTransformer: "movie_store.comedy" references: []
-2020/06/09 02:32:40 [DEBUG] ReferenceTransformer: "provider.movie" references: []
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2020/06/15 02:10:09 [TRACE] AttachSchemaTransformer: attaching resource schema to store_movies.saw
+2020/06/15 02:10:09 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider.store
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/06/15 02:10:09 [DEBUG] ReferenceTransformer: "store_movies.saw" references: []
+2020/06/15 02:10:09 [DEBUG] ReferenceTransformer: "provider.store" references: []
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
 meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
-  movie_store.comedy - *terraform.NodeValidatableResource
-  provider.movie - *terraform.NodeApplyableProvider
-movie_store.comedy - *terraform.NodeValidatableResource
-  provider.movie - *terraform.NodeApplyableProvider
-provider.movie - *terraform.NodeApplyableProvider
+  provider.store - *terraform.NodeApplyableProvider
+  store_movies.saw - *terraform.NodeValidatableResource
+provider.store - *terraform.NodeApplyableProvider
+store_movies.saw - *terraform.NodeValidatableResource
+  provider.store - *terraform.NodeApplyableProvider
 ------
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.TargetsTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
 meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
-  movie_store.comedy - *terraform.NodeValidatableResource
-  provider.movie - *terraform.NodeApplyableProvider
-movie_store.comedy - *terraform.NodeValidatableResource
-  provider.movie - *terraform.NodeApplyableProvider
-provider.movie - *terraform.NodeApplyableProvider
-provider.movie (close) - *terraform.graphNodeCloseProvider
-  movie_store.comedy - *terraform.NodeValidatableResource
-  provider.movie - *terraform.NodeApplyableProvider
+  provider.store - *terraform.NodeApplyableProvider
+  store_movies.saw - *terraform.NodeValidatableResource
+provider.store - *terraform.NodeApplyableProvider
+provider.store (close) - *terraform.graphNodeCloseProvider
+  provider.store - *terraform.NodeApplyableProvider
+  store_movies.saw - *terraform.NodeValidatableResource
+store_movies.saw - *terraform.NodeValidatableResource
+  provider.store - *terraform.NodeApplyableProvider
 ------
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.RootTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.RootTransformer with new graph:
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.RootTransformer with new graph:
 meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
-  movie_store.comedy - *terraform.NodeValidatableResource
-  provider.movie - *terraform.NodeApplyableProvider
-movie_store.comedy - *terraform.NodeValidatableResource
-  provider.movie - *terraform.NodeApplyableProvider
-provider.movie - *terraform.NodeApplyableProvider
-provider.movie (close) - *terraform.graphNodeCloseProvider
-  movie_store.comedy - *terraform.NodeValidatableResource
-  provider.movie - *terraform.NodeApplyableProvider
+  provider.store - *terraform.NodeApplyableProvider
+  store_movies.saw - *terraform.NodeValidatableResource
+provider.store - *terraform.NodeApplyableProvider
+provider.store (close) - *terraform.graphNodeCloseProvider
+  provider.store - *terraform.NodeApplyableProvider
+  store_movies.saw - *terraform.NodeValidatableResource
 root - terraform.graphNodeRoot
   meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
-  provider.movie (close) - *terraform.graphNodeCloseProvider
+  provider.store (close) - *terraform.graphNodeCloseProvider
+store_movies.saw - *terraform.NodeValidatableResource
+  provider.store - *terraform.NodeApplyableProvider
 ------
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
 meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
-  movie_store.comedy - *terraform.NodeValidatableResource
-movie_store.comedy - *terraform.NodeValidatableResource
-  provider.movie - *terraform.NodeApplyableProvider
-provider.movie - *terraform.NodeApplyableProvider
-provider.movie (close) - *terraform.graphNodeCloseProvider
-  movie_store.comedy - *terraform.NodeValidatableResource
+  store_movies.saw - *terraform.NodeValidatableResource
+provider.store - *terraform.NodeApplyableProvider
+provider.store (close) - *terraform.graphNodeCloseProvider
+  store_movies.saw - *terraform.NodeValidatableResource
 root - terraform.graphNodeRoot
   meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
-  provider.movie (close) - *terraform.graphNodeCloseProvider
+  provider.store (close) - *terraform.graphNodeCloseProvider
+store_movies.saw - *terraform.NodeValidatableResource
+  provider.store - *terraform.NodeApplyableProvider
 ------
-2020/06/09 02:32:40 [DEBUG] Starting graph walk: walkValidate
-2020/06/09 02:32:40 [TRACE] dag/walk: updating graph
-2020/06/09 02:32:40 [TRACE] dag/walk: added new vertex: "movie_store.comedy"
-2020/06/09 02:32:40 [TRACE] dag/walk: added new vertex: "provider.movie"
-2020/06/09 02:32:40 [TRACE] dag/walk: added new vertex: "meta.count-boundary (EachMode fixup)"
-2020/06/09 02:32:40 [TRACE] dag/walk: added new vertex: "provider.movie (close)"
-2020/06/09 02:32:40 [TRACE] dag/walk: added new vertex: "root"
-2020/06/09 02:32:40 [TRACE] dag/walk: added edge: "provider.movie (close)" waiting on "movie_store.comedy"
-2020/06/09 02:32:40 [TRACE] dag/walk: added edge: "root" waiting on "meta.count-boundary (EachMode fixup)"
-2020/06/09 02:32:40 [TRACE] dag/walk: added edge: "root" waiting on "provider.movie (close)"
-2020/06/09 02:32:40 [TRACE] dag/walk: added edge: "movie_store.comedy" waiting on "provider.movie"
-2020/06/09 02:32:40 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "movie_store.comedy"
-2020/06/09 02:32:40 [TRACE] dag/walk: dependencies changed for "provider.movie (close)", sending new deps
-2020/06/09 02:32:40 [TRACE] dag/walk: dependencies changed for "root", sending new deps
-2020/06/09 02:32:40 [TRACE] dag/walk: dependencies changed for "movie_store.comedy", sending new deps
-2020/06/09 02:32:40 [TRACE] dag/walk: dependencies changed for "meta.count-boundary (EachMode fixup)", sending new deps
-2020/06/09 02:32:40 [TRACE] dag/walk: visiting "provider.movie"
-2020/06/09 02:32:40 [TRACE] vertex "provider.movie": starting visit (*terraform.NodeApplyableProvider)
-2020/06/09 02:32:40 [TRACE] vertex "provider.movie": evaluating
-2020/06/09 02:32:40 [TRACE] [walkValidate] Entering eval tree: provider.movie
-2020/06/09 02:32:40 [TRACE] <root>: eval: *terraform.EvalSequence
-2020/06/09 02:32:40 [TRACE] <root>: eval: *terraform.EvalInitProvider
-2020-06-09T02:32:40.580-0400 [INFO]  plugin: configuring client automatic mTLS
-2020-06-09T02:32:40.625-0400 [DEBUG] plugin: starting plugin: path=/Users/chrisy/Documents/GO/terraplugin/terraform-provider-movie args=[/Users/chrisy/Documents/GO/terraplugin/terraform-provider-movie]
-2020-06-09T02:32:40.629-0400 [DEBUG] plugin: plugin started: path=/Users/chrisy/Documents/GO/terraplugin/terraform-provider-movie pid=35482
-2020-06-09T02:32:40.629-0400 [DEBUG] plugin: waiting for RPC address: path=/Users/chrisy/Documents/GO/terraplugin/terraform-provider-movie
-2020-06-09T02:32:40.659-0400 [INFO]  plugin.terraform-provider-movie: configuring server automatic mTLS: timestamp=2020-06-09T02:32:40.659-0400
-2020-06-09T02:32:40.704-0400 [DEBUG] plugin: using plugin: version=5
-2020-06-09T02:32:40.704-0400 [DEBUG] plugin.terraform-provider-movie: plugin address: address=/var/folders/5k/01p9rr_x4194p99qtvgt_bxr0000gn/T/plugin694871969 network=unix timestamp=2020-06-09T02:32:40.703-0400
-2020/06/09 02:32:40 [TRACE] BuiltinEvalContext: Initialized "movie" provider for provider.movie
-2020/06/09 02:32:40 [TRACE] <root>: eval: terraform.EvalNoop
-2020/06/09 02:32:40 [TRACE] <root>: eval: *terraform.EvalOpFilter
-2020/06/09 02:32:40 [TRACE] <root>: eval: *terraform.EvalSequence
-2020/06/09 02:32:40 [TRACE] <root>: eval: *terraform.EvalGetProvider
-2020/06/09 02:32:40 [TRACE] <root>: eval: *terraform.EvalValidateProvider
-2020/06/09 02:32:40 [TRACE] buildProviderConfig for provider.movie: using explicit config only
-2020/06/09 02:32:40 [TRACE] GRPCProvider: GetSchema
-2020/06/09 02:32:40 [TRACE] GRPCProvider: PrepareProviderConfig
-2020/06/09 02:32:40 [TRACE] <root>: eval: terraform.EvalNoop
-2020/06/09 02:32:40 [TRACE] <root>: eval: terraform.EvalNoop
-2020/06/09 02:32:40 [TRACE] [walkValidate] Exiting eval tree: provider.movie
-2020/06/09 02:32:40 [TRACE] vertex "provider.movie": visit complete
-2020/06/09 02:32:40 [TRACE] dag/walk: visiting "movie_store.comedy"
-2020/06/09 02:32:40 [TRACE] vertex "movie_store.comedy": starting visit (*terraform.NodeValidatableResource)
-2020/06/09 02:32:40 [TRACE] vertex "movie_store.comedy": evaluating
-2020/06/09 02:32:40 [TRACE] [walkValidate] Entering eval tree: movie_store.comedy
-2020/06/09 02:32:40 [TRACE] <root>: eval: *terraform.EvalSequence
-2020/06/09 02:32:40 [TRACE] <root>: eval: *terraform.EvalGetProvider
-2020/06/09 02:32:40 [TRACE] <root>: eval: *terraform.EvalValidateResource
-2020/06/09 02:32:40 [TRACE] GRPCProvider: ValidateResourceTypeConfig
-2020/06/09 02:32:40 [TRACE] [walkValidate] Exiting eval tree: movie_store.comedy
-2020/06/09 02:32:40 [TRACE] vertex "movie_store.comedy": visit complete
-2020/06/09 02:32:40 [TRACE] dag/walk: visiting "provider.movie (close)"
-2020/06/09 02:32:40 [TRACE] vertex "provider.movie (close)": starting visit (*terraform.graphNodeCloseProvider)
-2020/06/09 02:32:40 [TRACE] vertex "provider.movie (close)": evaluating
-2020/06/09 02:32:40 [TRACE] [walkValidate] Entering eval tree: provider.movie (close)
-2020/06/09 02:32:40 [TRACE] <root>: eval: *terraform.EvalCloseProvider
-2020/06/09 02:32:40 [TRACE] GRPCProvider: Close
-2020/06/09 02:32:40 [TRACE] dag/walk: visiting "meta.count-boundary (EachMode fixup)"
-2020/06/09 02:32:40 [TRACE] vertex "meta.count-boundary (EachMode fixup)": starting visit (*terraform.NodeCountBoundary)
-2020/06/09 02:32:40 [TRACE] vertex "meta.count-boundary (EachMode fixup)": evaluating
-2020/06/09 02:32:40 [TRACE] [walkValidate] Entering eval tree: meta.count-boundary (EachMode fixup)
-2020/06/09 02:32:40 [TRACE] <root>: eval: *terraform.EvalCountFixZeroOneBoundaryGlobal
-2020/06/09 02:32:40 [TRACE] [walkValidate] Exiting eval tree: meta.count-boundary (EachMode fixup)
-2020/06/09 02:32:40 [TRACE] vertex "meta.count-boundary (EachMode fixup)": visit complete
-2020-06-09T02:32:40.807-0400 [DEBUG] plugin: plugin process exited: path=/Users/chrisy/Documents/GO/terraplugin/terraform-provider-movie pid=35482
-2020-06-09T02:32:40.807-0400 [DEBUG] plugin: plugin exited
-2020/06/09 02:32:40 [TRACE] [walkValidate] Exiting eval tree: provider.movie (close)
-2020/06/09 02:32:40 [TRACE] vertex "provider.movie (close)": visit complete
-2020/06/09 02:32:40 [TRACE] dag/walk: visiting "root"
-2020/06/09 02:32:40 [TRACE] vertex "root": starting visit (terraform.graphNodeRoot)
-2020/06/09 02:32:40 [TRACE] vertex "root": visit complete
-2020/06/09 02:32:40 [INFO] backend/local: apply calling Refresh
-2020/06/09 02:32:40 [INFO] terraform: building graph: GraphTypeRefresh
-2020/06/09 02:32:40 [TRACE] No managed resources in state during refresh; skipping managed resource transformer
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.ConfigTransformer
-2020/06/09 02:32:40 [TRACE] ConfigTransformer: Starting for path: 
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.ConfigTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.StateTransformer
-2020/06/09 02:32:40 [TRACE] StateTransformer: state is empty, so nothing to do
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.AttachStateTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.RootVariableTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.LocalTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.OutputTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.graphTransformerMulti
-2020/06/09 02:32:40 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
-2020/06/09 02:32:40 [TRACE] ProviderConfigTransformer: attaching to "provider.movie" provider configuration from main.tf:1,1-17
-2020/06/09 02:32:40 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
-provider.movie - *terraform.NodeApplyableProvider
+2020/06/15 02:10:09 [DEBUG] Starting graph walk: walkValidate
+2020/06/15 02:10:09 [TRACE] dag/walk: updating graph
+2020/06/15 02:10:09 [TRACE] dag/walk: added new vertex: "store_movies.saw"
+2020/06/15 02:10:09 [TRACE] dag/walk: added new vertex: "provider.store"
+2020/06/15 02:10:09 [TRACE] dag/walk: added new vertex: "meta.count-boundary (EachMode fixup)"
+2020/06/15 02:10:09 [TRACE] dag/walk: added new vertex: "provider.store (close)"
+2020/06/15 02:10:09 [TRACE] dag/walk: added new vertex: "root"
+2020/06/15 02:10:09 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "store_movies.saw"
+2020/06/15 02:10:09 [TRACE] dag/walk: added edge: "provider.store (close)" waiting on "store_movies.saw"
+2020/06/15 02:10:09 [TRACE] dag/walk: added edge: "root" waiting on "meta.count-boundary (EachMode fixup)"
+2020/06/15 02:10:09 [TRACE] dag/walk: added edge: "root" waiting on "provider.store (close)"
+2020/06/15 02:10:09 [TRACE] dag/walk: added edge: "store_movies.saw" waiting on "provider.store"
+2020/06/15 02:10:09 [TRACE] dag/walk: dependencies changed for "store_movies.saw", sending new deps
+2020/06/15 02:10:09 [TRACE] dag/walk: dependencies changed for "meta.count-boundary (EachMode fixup)", sending new deps
+2020/06/15 02:10:09 [TRACE] dag/walk: dependencies changed for "provider.store (close)", sending new deps
+2020/06/15 02:10:09 [TRACE] dag/walk: dependencies changed for "root", sending new deps
+2020/06/15 02:10:09 [TRACE] dag/walk: visiting "provider.store"
+2020/06/15 02:10:09 [TRACE] vertex "provider.store": starting visit (*terraform.NodeApplyableProvider)
+2020/06/15 02:10:09 [TRACE] vertex "provider.store": evaluating
+2020/06/15 02:10:09 [TRACE] [walkValidate] Entering eval tree: provider.store
+2020/06/15 02:10:09 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/06/15 02:10:09 [TRACE] <root>: eval: *terraform.EvalInitProvider
+2020-06-15T02:10:09.676-0400 [INFO]  plugin: configuring client automatic mTLS
+2020-06-15T02:10:09.699-0400 [DEBUG] plugin: starting plugin: path=/Users/chrisy/Documents/GO/terraplugin/terraform-provider-store args=[/Users/chrisy/Documents/GO/terraplugin/terraform-provider-store]
+2020-06-15T02:10:09.702-0400 [DEBUG] plugin: plugin started: path=/Users/chrisy/Documents/GO/terraplugin/terraform-provider-store pid=91408
+2020-06-15T02:10:09.702-0400 [DEBUG] plugin: waiting for RPC address: path=/Users/chrisy/Documents/GO/terraplugin/terraform-provider-store
+2020-06-15T02:10:09.717-0400 [INFO]  plugin.terraform-provider-store: configuring server automatic mTLS: timestamp=2020-06-15T02:10:09.717-0400
+2020-06-15T02:10:09.741-0400 [DEBUG] plugin.terraform-provider-store: plugin address: network=unix address=/var/folders/5k/01p9rr_x4194p99qtvgt_bxr0000gn/T/plugin915683527 timestamp=2020-06-15T02:10:09.741-0400
+2020-06-15T02:10:09.741-0400 [DEBUG] plugin: using plugin: version=5
+2020/06/15 02:10:09 [TRACE] BuiltinEvalContext: Initialized "store" provider for provider.store
+2020/06/15 02:10:09 [TRACE] <root>: eval: terraform.EvalNoop
+2020/06/15 02:10:09 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2020/06/15 02:10:09 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/06/15 02:10:09 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/06/15 02:10:09 [TRACE] <root>: eval: *terraform.EvalValidateProvider
+2020/06/15 02:10:09 [TRACE] buildProviderConfig for provider.store: using explicit config only
+2020/06/15 02:10:09 [TRACE] GRPCProvider: GetSchema
+2020/06/15 02:10:09 [TRACE] GRPCProvider: PrepareProviderConfig
+2020/06/15 02:10:09 [TRACE] <root>: eval: terraform.EvalNoop
+2020/06/15 02:10:09 [TRACE] <root>: eval: terraform.EvalNoop
+2020/06/15 02:10:09 [TRACE] [walkValidate] Exiting eval tree: provider.store
+2020/06/15 02:10:09 [TRACE] vertex "provider.store": visit complete
+2020/06/15 02:10:09 [TRACE] dag/walk: visiting "store_movies.saw"
+2020/06/15 02:10:09 [TRACE] vertex "store_movies.saw": starting visit (*terraform.NodeValidatableResource)
+2020/06/15 02:10:09 [TRACE] vertex "store_movies.saw": evaluating
+2020/06/15 02:10:09 [TRACE] [walkValidate] Entering eval tree: store_movies.saw
+2020/06/15 02:10:09 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/06/15 02:10:09 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/06/15 02:10:09 [TRACE] <root>: eval: *terraform.EvalValidateResource
+2020/06/15 02:10:09 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/06/15 02:10:09 [TRACE] [walkValidate] Exiting eval tree: store_movies.saw
+2020/06/15 02:10:09 [TRACE] vertex "store_movies.saw": visit complete
+2020/06/15 02:10:09 [TRACE] dag/walk: visiting "meta.count-boundary (EachMode fixup)"
+2020/06/15 02:10:09 [TRACE] vertex "meta.count-boundary (EachMode fixup)": starting visit (*terraform.NodeCountBoundary)
+2020/06/15 02:10:09 [TRACE] vertex "meta.count-boundary (EachMode fixup)": evaluating
+2020/06/15 02:10:09 [TRACE] [walkValidate] Entering eval tree: meta.count-boundary (EachMode fixup)
+2020/06/15 02:10:09 [TRACE] dag/walk: visiting "provider.store (close)"
+2020/06/15 02:10:09 [TRACE] vertex "provider.store (close)": starting visit (*terraform.graphNodeCloseProvider)
+2020/06/15 02:10:09 [TRACE] <root>: eval: *terraform.EvalCountFixZeroOneBoundaryGlobal
+2020/06/15 02:10:09 [TRACE] vertex "provider.store (close)": evaluating
+2020/06/15 02:10:09 [TRACE] [walkValidate] Entering eval tree: provider.store (close)
+2020/06/15 02:10:09 [TRACE] <root>: eval: *terraform.EvalCloseProvider
+2020/06/15 02:10:09 [TRACE] GRPCProvider: Close
+2020/06/15 02:10:09 [TRACE] [walkValidate] Exiting eval tree: meta.count-boundary (EachMode fixup)
+2020/06/15 02:10:09 [TRACE] vertex "meta.count-boundary (EachMode fixup)": visit complete
+2020-06-15T02:10:09.791-0400 [DEBUG] plugin: plugin process exited: path=/Users/chrisy/Documents/GO/terraplugin/terraform-provider-store pid=91408
+2020-06-15T02:10:09.791-0400 [DEBUG] plugin: plugin exited
+2020/06/15 02:10:09 [TRACE] [walkValidate] Exiting eval tree: provider.store (close)
+2020/06/15 02:10:09 [TRACE] vertex "provider.store (close)": visit complete
+2020/06/15 02:10:09 [TRACE] dag/walk: visiting "root"
+2020/06/15 02:10:09 [TRACE] vertex "root": starting visit (terraform.graphNodeRoot)
+2020/06/15 02:10:09 [TRACE] vertex "root": visit complete
+2020/06/15 02:10:09 [INFO] backend/local: apply calling Refresh
+2020/06/15 02:10:09 [INFO] terraform: building graph: GraphTypeRefresh
+2020/06/15 02:10:09 [TRACE] No managed resources in state during refresh; skipping managed resource transformer
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/06/15 02:10:09 [TRACE] ConfigTransformer: Starting for path: 
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.ConfigTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.StateTransformer
+2020/06/15 02:10:09 [TRACE] StateTransformer: state is empty, so nothing to do
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.LocalTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.OutputTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2020/06/15 02:10:09 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2020/06/15 02:10:09 [TRACE] ProviderConfigTransformer: attaching to "provider.store" provider configuration from main.tf:1,1-17
+2020/06/15 02:10:09 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+provider.store - *terraform.NodeApplyableProvider
 ------
-2020/06/09 02:32:40 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
-2020/06/09 02:32:40 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
-2020/06/09 02:32:40 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
-2020/06/09 02:32:40 [DEBUG] pruning unused provider.movie
-2020/06/09 02:32:40 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer with new graph:
+2020/06/15 02:10:09 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2020/06/15 02:10:09 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2020/06/15 02:10:09 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2020/06/15 02:10:09 [DEBUG] pruning unused provider.store
+2020/06/15 02:10:09 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer with new graph:
 ------
-2020/06/09 02:32:40 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
-2020/06/09 02:32:40 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.graphTransformerMulti (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.ReferenceTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.TargetsTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.CloseProviderTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.RootTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.RootTransformer with new graph:
+2020/06/15 02:10:09 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2020/06/15 02:10:09 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.graphTransformerMulti (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.CloseProviderTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.RootTransformer with new graph:
 root - terraform.graphNodeRoot
 ------
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer (no changes)
-2020/06/09 02:32:40 [DEBUG] Starting graph walk: walkRefresh
-2020/06/09 02:32:40 [TRACE] dag/walk: updating graph
-2020/06/09 02:32:40 [TRACE] dag/walk: added new vertex: "root"
-2020/06/09 02:32:40 [TRACE] dag/walk: visiting "root"
-2020/06/09 02:32:40 [TRACE] vertex "root": starting visit (terraform.graphNodeRoot)
-2020/06/09 02:32:40 [TRACE] vertex "root": visit complete
-2020/06/09 02:32:40 [INFO] backend/local: apply calling Plan
-2020/06/09 02:32:40 [INFO] terraform: building graph: GraphTypePlan
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.ConfigTransformer
-2020/06/09 02:32:40 [TRACE] ConfigTransformer: Starting for path: 
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
-movie_store.comedy - *terraform.NodePlannableResource
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer (no changes)
+2020/06/15 02:10:09 [DEBUG] Starting graph walk: walkRefresh
+2020/06/15 02:10:09 [TRACE] dag/walk: updating graph
+2020/06/15 02:10:09 [TRACE] dag/walk: added new vertex: "root"
+2020/06/15 02:10:09 [TRACE] dag/walk: visiting "root"
+2020/06/15 02:10:09 [TRACE] vertex "root": starting visit (terraform.graphNodeRoot)
+2020/06/15 02:10:09 [TRACE] vertex "root": visit complete
+2020/06/15 02:10:09 [INFO] backend/local: apply calling Plan
+2020/06/15 02:10:09 [INFO] terraform: building graph: GraphTypePlan
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/06/15 02:10:09 [TRACE] ConfigTransformer: Starting for path: 
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+store_movies.saw - *terraform.NodePlannableResource
 ------
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.LocalTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.OutputTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.StateTransformer
-2020/06/09 02:32:40 [TRACE] StateTransformer: state is empty, so nothing to do
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
-2020/06/09 02:32:40 [TRACE] AttachResourceConfigTransformer: attaching to "movie_store.comedy" (*terraform.NodePlannableResource) config from main.tf:7,1-32
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.AttachStateTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.RootVariableTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.graphTransformerMulti
-2020/06/09 02:32:40 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
-2020/06/09 02:32:40 [TRACE] ProviderConfigTransformer: attaching to "provider.movie" provider configuration from main.tf:1,1-17
-2020/06/09 02:32:40 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
-movie_store.comedy - *terraform.NodePlannableResource
-provider.movie - *terraform.NodeApplyableProvider
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.LocalTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.OutputTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.StateTransformer
+2020/06/15 02:10:09 [TRACE] StateTransformer: state is empty, so nothing to do
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2020/06/15 02:10:09 [TRACE] AttachResourceConfigTransformer: attaching to "store_movies.saw" (*terraform.NodePlannableResource) config from main.tf:11,1-30
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2020/06/15 02:10:09 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2020/06/15 02:10:09 [TRACE] ProviderConfigTransformer: attaching to "provider.store" provider configuration from main.tf:1,1-17
+2020/06/15 02:10:09 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+provider.store - *terraform.NodeApplyableProvider
+store_movies.saw - *terraform.NodePlannableResource
 ------
-2020/06/09 02:32:40 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
-2020/06/09 02:32:40 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
-2020/06/09 02:32:40 [TRACE] ProviderTransformer: movie_store.comedy is provided by provider.movie or inherited equivalent
-2020/06/09 02:32:40 [TRACE] ProviderTransformer: exact match for provider.movie serving movie_store.comedy
-2020/06/09 02:32:40 [DEBUG] ProviderTransformer: "movie_store.comedy" (*terraform.NodePlannableResource) needs provider.movie
-2020/06/09 02:32:40 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
-movie_store.comedy - *terraform.NodePlannableResource
-  provider.movie - *terraform.NodeApplyableProvider
-provider.movie - *terraform.NodeApplyableProvider
+2020/06/15 02:10:09 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2020/06/15 02:10:09 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2020/06/15 02:10:09 [TRACE] ProviderTransformer: store_movies.saw is provided by provider.store or inherited equivalent
+2020/06/15 02:10:09 [TRACE] ProviderTransformer: exact match for provider.store serving store_movies.saw
+2020/06/15 02:10:09 [DEBUG] ProviderTransformer: "store_movies.saw" (*terraform.NodePlannableResource) needs provider.store
+2020/06/15 02:10:09 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+provider.store - *terraform.NodeApplyableProvider
+store_movies.saw - *terraform.NodePlannableResource
+  provider.store - *terraform.NodeApplyableProvider
 ------
-2020/06/09 02:32:40 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
-2020/06/09 02:32:40 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
-2020/06/09 02:32:40 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
-movie_store.comedy - *terraform.NodePlannableResource
-  provider.movie - *terraform.NodeApplyableProvider
-provider.movie - *terraform.NodeApplyableProvider
+2020/06/15 02:10:09 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2020/06/15 02:10:09 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2020/06/15 02:10:09 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+provider.store - *terraform.NodeApplyableProvider
+store_movies.saw - *terraform.NodePlannableResource
+  provider.store - *terraform.NodeApplyableProvider
 ------
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
-2020/06/09 02:32:40 [TRACE] AttachSchemaTransformer: attaching resource schema to movie_store.comedy
-2020/06/09 02:32:40 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider.movie
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.ReferenceTransformer
-2020/06/09 02:32:40 [DEBUG] ReferenceTransformer: "movie_store.comedy" references: []
-2020/06/09 02:32:40 [DEBUG] ReferenceTransformer: "provider.movie" references: []
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2020/06/15 02:10:09 [TRACE] AttachSchemaTransformer: attaching resource schema to store_movies.saw
+2020/06/15 02:10:09 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider.store
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/06/15 02:10:09 [DEBUG] ReferenceTransformer: "store_movies.saw" references: []
+2020/06/15 02:10:09 [DEBUG] ReferenceTransformer: "provider.store" references: []
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
 meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
-  movie_store.comedy - *terraform.NodePlannableResource
-  provider.movie - *terraform.NodeApplyableProvider
-movie_store.comedy - *terraform.NodePlannableResource
-  provider.movie - *terraform.NodeApplyableProvider
-provider.movie - *terraform.NodeApplyableProvider
+  provider.store - *terraform.NodeApplyableProvider
+  store_movies.saw - *terraform.NodePlannableResource
+provider.store - *terraform.NodeApplyableProvider
+store_movies.saw - *terraform.NodePlannableResource
+  provider.store - *terraform.NodeApplyableProvider
 ------
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.TargetsTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
-2020/06/09 02:32:40 [TRACE] ForcedCBDTransformer: "movie_store.comedy" (*terraform.NodePlannableResource) has no CBD descendent, so skipping
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2020/06/15 02:10:09 [TRACE] ForcedCBDTransformer: "store_movies.saw" (*terraform.NodePlannableResource) has no CBD descendent, so skipping
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
 meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
-  movie_store.comedy - *terraform.NodePlannableResource
-  provider.movie - *terraform.NodeApplyableProvider
-movie_store.comedy - *terraform.NodePlannableResource
-  provider.movie - *terraform.NodeApplyableProvider
-provider.movie - *terraform.NodeApplyableProvider
-provider.movie (close) - *terraform.graphNodeCloseProvider
-  movie_store.comedy - *terraform.NodePlannableResource
-  provider.movie - *terraform.NodeApplyableProvider
+  provider.store - *terraform.NodeApplyableProvider
+  store_movies.saw - *terraform.NodePlannableResource
+provider.store - *terraform.NodeApplyableProvider
+provider.store (close) - *terraform.graphNodeCloseProvider
+  provider.store - *terraform.NodeApplyableProvider
+  store_movies.saw - *terraform.NodePlannableResource
+store_movies.saw - *terraform.NodePlannableResource
+  provider.store - *terraform.NodeApplyableProvider
 ------
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer (no changes)
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.RootTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.RootTransformer with new graph:
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.RootTransformer with new graph:
 meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
-  movie_store.comedy - *terraform.NodePlannableResource
-  provider.movie - *terraform.NodeApplyableProvider
-movie_store.comedy - *terraform.NodePlannableResource
-  provider.movie - *terraform.NodeApplyableProvider
-provider.movie - *terraform.NodeApplyableProvider
-provider.movie (close) - *terraform.graphNodeCloseProvider
-  movie_store.comedy - *terraform.NodePlannableResource
-  provider.movie - *terraform.NodeApplyableProvider
-root - terraform.graphNodeRoot
-  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
-  provider.movie (close) - *terraform.graphNodeCloseProvider
-------
-2020/06/09 02:32:40 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
-2020/06/09 02:32:40 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
-meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
-  movie_store.comedy - *terraform.NodePlannableResource
-movie_store.comedy - *terraform.NodePlannableResource
-  provider.movie - *terraform.NodeApplyableProvider
-provider.movie - *terraform.NodeApplyableProvider
-provider.movie (close) - *terraform.graphNodeCloseProvider
-  movie_store.comedy - *terraform.NodePlannableResource
+  provider.store - *terraform.NodeApplyableProvider
+  store_movies.saw - *terraform.NodePlannableResource
+provider.store - *terraform.NodeApplyableProvider
+provider.store (close) - *terraform.graphNodeCloseProvider
+  provider.store - *terraform.NodeApplyableProvider
+  store_movies.saw - *terraform.NodePlannableResource
 root - terraform.graphNodeRoot
   meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
-  provider.movie (close) - *terraform.graphNodeCloseProvider
+  provider.store (close) - *terraform.graphNodeCloseProvider
+store_movies.saw - *terraform.NodePlannableResource
+  provider.store - *terraform.NodeApplyableProvider
 ------
-2020/06/09 02:32:40 [DEBUG] Starting graph walk: walkPlan
-2020/06/09 02:32:40 [TRACE] dag/walk: updating graph
-2020/06/09 02:32:40 [TRACE] dag/walk: added new vertex: "movie_store.comedy"
-2020/06/09 02:32:40 [TRACE] dag/walk: added new vertex: "provider.movie"
-2020/06/09 02:32:40 [TRACE] dag/walk: added new vertex: "meta.count-boundary (EachMode fixup)"
-2020/06/09 02:32:40 [TRACE] dag/walk: added new vertex: "provider.movie (close)"
-2020/06/09 02:32:40 [TRACE] dag/walk: added new vertex: "root"
-2020/06/09 02:32:40 [TRACE] dag/walk: added edge: "provider.movie (close)" waiting on "movie_store.comedy"
-2020/06/09 02:32:40 [TRACE] dag/walk: added edge: "root" waiting on "provider.movie (close)"
-2020/06/09 02:32:40 [TRACE] dag/walk: added edge: "root" waiting on "meta.count-boundary (EachMode fixup)"
-2020/06/09 02:32:40 [TRACE] dag/walk: added edge: "movie_store.comedy" waiting on "provider.movie"
-2020/06/09 02:32:40 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "movie_store.comedy"
-2020/06/09 02:32:40 [TRACE] dag/walk: dependencies changed for "provider.movie (close)", sending new deps
-2020/06/09 02:32:40 [TRACE] dag/walk: dependencies changed for "root", sending new deps
-2020/06/09 02:32:40 [TRACE] dag/walk: dependencies changed for "movie_store.comedy", sending new deps
-2020/06/09 02:32:40 [TRACE] dag/walk: dependencies changed for "meta.count-boundary (EachMode fixup)", sending new deps
-2020/06/09 02:32:40 [TRACE] dag/walk: visiting "provider.movie"
-2020/06/09 02:32:40 [TRACE] vertex "provider.movie": starting visit (*terraform.NodeApplyableProvider)
-2020/06/09 02:32:40 [TRACE] vertex "provider.movie": evaluating
-2020/06/09 02:32:40 [TRACE] [walkPlan] Entering eval tree: provider.movie
-2020/06/09 02:32:40 [TRACE] <root>: eval: *terraform.EvalSequence
-2020/06/09 02:32:40 [TRACE] <root>: eval: *terraform.EvalInitProvider
-2020-06-09T02:32:40.812-0400 [INFO]  plugin: configuring client automatic mTLS
-2020-06-09T02:32:40.860-0400 [DEBUG] plugin: starting plugin: path=/Users/chrisy/Documents/GO/terraplugin/terraform-provider-movie args=[/Users/chrisy/Documents/GO/terraplugin/terraform-provider-movie]
-2020-06-09T02:32:40.865-0400 [DEBUG] plugin: plugin started: path=/Users/chrisy/Documents/GO/terraplugin/terraform-provider-movie pid=35483
-2020-06-09T02:32:40.865-0400 [DEBUG] plugin: waiting for RPC address: path=/Users/chrisy/Documents/GO/terraplugin/terraform-provider-movie
-2020-06-09T02:32:40.895-0400 [INFO]  plugin.terraform-provider-movie: configuring server automatic mTLS: timestamp=2020-06-09T02:32:40.895-0400
-2020-06-09T02:32:40.940-0400 [DEBUG] plugin: using plugin: version=5
-2020-06-09T02:32:40.940-0400 [DEBUG] plugin.terraform-provider-movie: plugin address: address=/var/folders/5k/01p9rr_x4194p99qtvgt_bxr0000gn/T/plugin102455446 network=unix timestamp=2020-06-09T02:32:40.940-0400
-2020/06/09 02:32:40 [TRACE] BuiltinEvalContext: Initialized "movie" provider for provider.movie
-2020/06/09 02:32:40 [TRACE] <root>: eval: terraform.EvalNoop
-2020/06/09 02:32:40 [TRACE] <root>: eval: terraform.EvalNoop
-2020/06/09 02:32:40 [TRACE] <root>: eval: *terraform.EvalOpFilter
-2020/06/09 02:32:40 [TRACE] <root>: eval: *terraform.EvalSequence
-2020/06/09 02:32:40 [TRACE] <root>: eval: *terraform.EvalGetProvider
-2020/06/09 02:32:40 [TRACE] <root>: eval: *terraform.EvalOpFilter
-2020/06/09 02:32:40 [TRACE] <root>: eval: *terraform.EvalSequence
-2020/06/09 02:32:40 [TRACE] <root>: eval: *terraform.EvalConfigProvider
-2020/06/09 02:32:40 [TRACE] buildProviderConfig for provider.movie: using explicit config only
-2020/06/09 02:32:40 [TRACE] GRPCProvider: GetSchema
-2020/06/09 02:32:41 [TRACE] GRPCProvider: Configure
-2020/06/09 02:32:41 [TRACE] [walkPlan] Exiting eval tree: provider.movie
-2020/06/09 02:32:41 [TRACE] vertex "provider.movie": visit complete
-2020/06/09 02:32:41 [TRACE] dag/walk: visiting "movie_store.comedy"
-2020/06/09 02:32:41 [TRACE] vertex "movie_store.comedy": starting visit (*terraform.NodePlannableResource)
-2020/06/09 02:32:41 [TRACE] vertex "movie_store.comedy": evaluating
-2020/06/09 02:32:41 [TRACE] [walkPlan] Entering eval tree: movie_store.comedy
-2020/06/09 02:32:41 [TRACE] <root>: eval: *terraform.EvalWriteResourceState
-2020/06/09 02:32:41 [TRACE] [walkPlan] Exiting eval tree: movie_store.comedy
-2020/06/09 02:32:41 [TRACE] vertex "movie_store.comedy": expanding dynamic subgraph
-2020/06/09 02:32:41 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
-2020/06/09 02:32:41 [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
-movie_store.comedy - *terraform.NodePlannableResourceInstance
-------
-2020/06/09 02:32:41 [TRACE] Executing graph transform *terraform.OrphanResourceCountTransformer
-2020/06/09 02:32:41 [TRACE] Completed graph transform *terraform.OrphanResourceCountTransformer (no changes)
-2020/06/09 02:32:41 [TRACE] Executing graph transform *terraform.AttachStateTransformer
-2020/06/09 02:32:41 [DEBUG] Resource instance state not found for node "movie_store.comedy", instance movie_store.comedy
-2020/06/09 02:32:41 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
-2020/06/09 02:32:41 [TRACE] Executing graph transform *terraform.TargetsTransformer
-2020/06/09 02:32:41 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
-2020/06/09 02:32:41 [TRACE] Executing graph transform *terraform.ReferenceTransformer
-2020/06/09 02:32:41 [DEBUG] ReferenceTransformer: "movie_store.comedy" references: []
-2020/06/09 02:32:41 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
-2020/06/09 02:32:41 [TRACE] Executing graph transform *terraform.RootTransformer
-2020/06/09 02:32:41 [TRACE] Completed graph transform *terraform.RootTransformer (no changes)
-2020/06/09 02:32:41 [TRACE] vertex "movie_store.comedy": entering dynamic subgraph
-2020/06/09 02:32:41 [TRACE] dag/walk: updating graph
-2020/06/09 02:32:41 [TRACE] dag/walk: added new vertex: "movie_store.comedy"
-2020/06/09 02:32:41 [TRACE] dag/walk: visiting "movie_store.comedy"
-2020/06/09 02:32:41 [TRACE] vertex "movie_store.comedy": starting visit (*terraform.NodePlannableResourceInstance)
-2020/06/09 02:32:41 [TRACE] vertex "movie_store.comedy": evaluating
-2020/06/09 02:32:41 [TRACE] [walkPlan] Entering eval tree: movie_store.comedy
-2020/06/09 02:32:41 [TRACE] <root>: eval: *terraform.EvalSequence
-2020/06/09 02:32:41 [TRACE] <root>: eval: *terraform.EvalGetProvider
-2020/06/09 02:32:41 [TRACE] <root>: eval: *terraform.EvalReadState
-2020/06/09 02:32:41 [TRACE] EvalReadState: reading state for movie_store.comedy
-2020/06/09 02:32:41 [TRACE] EvalReadState: no state present for movie_store.comedy
-2020/06/09 02:32:41 [TRACE] <root>: eval: *terraform.EvalValidateSelfRef
-2020/06/09 02:32:41 [TRACE] <root>: eval: *terraform.EvalDiff
-2020/06/09 02:32:41 [TRACE] Re-validating config for "movie_store.comedy"
-2020/06/09 02:32:41 [TRACE] GRPCProvider: ValidateResourceTypeConfig
-2020/06/09 02:32:41 [TRACE] GRPCProvider: PlanResourceChange
-2020/06/09 02:32:41 [TRACE] <root>: eval: *terraform.EvalCheckPreventDestroy
-2020/06/09 02:32:41 [TRACE] <root>: eval: *terraform.EvalWriteState
-2020/06/09 02:32:41 [TRACE] EvalWriteState: writing current state object for movie_store.comedy
-2020/06/09 02:32:41 [TRACE] <root>: eval: *terraform.EvalWriteDiff
-2020/06/09 02:32:41 [TRACE] EvalWriteDiff: recorded Create change for movie_store.comedy
-2020/06/09 02:32:41 [TRACE] [walkPlan] Exiting eval tree: movie_store.comedy
-2020/06/09 02:32:41 [TRACE] vertex "movie_store.comedy": visit complete
-2020/06/09 02:32:41 [TRACE] vertex "movie_store.comedy": dynamic subgraph completed successfully
-2020/06/09 02:32:41 [TRACE] vertex "movie_store.comedy": visit complete
-2020/06/09 02:32:41 [TRACE] dag/walk: visiting "provider.movie (close)"
-2020/06/09 02:32:41 [TRACE] vertex "provider.movie (close)": starting visit (*terraform.graphNodeCloseProvider)
-2020/06/09 02:32:41 [TRACE] vertex "provider.movie (close)": evaluating
-2020/06/09 02:32:41 [TRACE] [walkPlan] Entering eval tree: provider.movie (close)
-2020/06/09 02:32:41 [TRACE] <root>: eval: *terraform.EvalCloseProvider
-2020/06/09 02:32:41 [TRACE] GRPCProvider: Close
-2020/06/09 02:32:41 [TRACE] dag/walk: visiting "meta.count-boundary (EachMode fixup)"
-2020/06/09 02:32:41 [TRACE] vertex "meta.count-boundary (EachMode fixup)": starting visit (*terraform.NodeCountBoundary)
-2020/06/09 02:32:41 [TRACE] vertex "meta.count-boundary (EachMode fixup)": evaluating
-2020/06/09 02:32:41 [TRACE] [walkPlan] Entering eval tree: meta.count-boundary (EachMode fixup)
-2020/06/09 02:32:41 [TRACE] <root>: eval: *terraform.EvalCountFixZeroOneBoundaryGlobal
-2020/06/09 02:32:41 [TRACE] [walkPlan] Exiting eval tree: meta.count-boundary (EachMode fixup)
-2020/06/09 02:32:41 [TRACE] vertex "meta.count-boundary (EachMode fixup)": visit complete
-2020-06-09T02:32:41.056-0400 [DEBUG] plugin: plugin process exited: path=/Users/chrisy/Documents/GO/terraplugin/terraform-provider-movie pid=35483
-2020-06-09T02:32:41.056-0400 [DEBUG] plugin: plugin exited
-2020/06/09 02:32:41 [TRACE] [walkPlan] Exiting eval tree: provider.movie (close)
-2020/06/09 02:32:41 [TRACE] vertex "provider.movie (close)": visit complete
-2020/06/09 02:32:41 [TRACE] dag/walk: visiting "root"
-2020/06/09 02:32:41 [TRACE] vertex "root": starting visit (terraform.graphNodeRoot)
-2020/06/09 02:32:41 [TRACE] vertex "root": visit complete
-2020/06/09 02:32:41 [DEBUG] command: asking for input: "Do you want to perform these actions?"
-2020/06/09 02:32:49 [INFO] backend/local: apply calling Apply
-2020/06/09 02:32:49 [INFO] terraform: building graph: GraphTypeApply
-2020/06/09 02:32:49 [TRACE] Executing graph transform *terraform.ConfigTransformer
-2020/06/09 02:32:49 [TRACE] ConfigTransformer: Starting for path: 
-2020/06/09 02:32:49 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
-movie_store.comedy (prepare state) - *terraform.NodeApplyableResource
-------
-2020/06/09 02:32:49 [TRACE] Executing graph transform *terraform.DiffTransformer
-2020/06/09 02:32:49 [TRACE] DiffTransformer starting
-2020/06/09 02:32:49 [TRACE] DiffTransformer: found Create change for movie_store.comedy 
-2020/06/09 02:32:49 [TRACE] DiffTransformer: movie_store.comedy will be represented by movie_store.comedy
-2020/06/09 02:32:49 [TRACE] DiffTransformer complete
-2020/06/09 02:32:49 [TRACE] Completed graph transform *terraform.DiffTransformer with new graph:
-movie_store.comedy - *terraform.NodeApplyableResourceInstance
-  movie_store.comedy (prepare state) - *terraform.NodeApplyableResource
-movie_store.comedy (prepare state) - *terraform.NodeApplyableResource
-------
-2020/06/09 02:32:49 [TRACE] Executing graph transform *terraform.OrphanResourceTransformer
-2020/06/09 02:32:49 [TRACE] Completed graph transform *terraform.OrphanResourceTransformer (no changes)
-2020/06/09 02:32:49 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
-2020/06/09 02:32:49 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
-2020/06/09 02:32:49 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
-2020/06/09 02:32:49 [TRACE] AttachResourceConfigTransformer: attaching to "movie_store.comedy (prepare state)" (*terraform.NodeApplyableResource) config from main.tf:7,1-32
-2020/06/09 02:32:49 [TRACE] AttachResourceConfigTransformer: attaching to "movie_store.comedy" (*terraform.NodeApplyableResourceInstance) config from main.tf:7,1-32
-2020/06/09 02:32:49 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
-2020/06/09 02:32:49 [TRACE] Executing graph transform *terraform.AttachStateTransformer
-2020/06/09 02:32:49 [DEBUG] Resource state not found for node "movie_store.comedy", instance movie_store.comedy
-2020/06/09 02:32:49 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
-2020/06/09 02:32:49 [TRACE] Executing graph transform *terraform.DestroyEdgeTransformer
-2020/06/09 02:32:49 [TRACE] Completed graph transform *terraform.DestroyEdgeTransformer (no changes)
-2020/06/09 02:32:49 [TRACE] Executing graph transform *terraform.CBDEdgeTransformer
-2020/06/09 02:32:49 [TRACE] Completed graph transform *terraform.CBDEdgeTransformer (no changes)
-2020/06/09 02:32:49 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
-2020/06/09 02:32:49 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
-2020/06/09 02:32:49 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
-2020/06/09 02:32:49 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
-2020/06/09 02:32:49 [TRACE] Executing graph transform *terraform.RootVariableTransformer
-2020/06/09 02:32:49 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
-2020/06/09 02:32:49 [TRACE] Executing graph transform *terraform.LocalTransformer
-2020/06/09 02:32:49 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
-2020/06/09 02:32:49 [TRACE] Executing graph transform *terraform.OutputTransformer
-2020/06/09 02:32:49 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
-2020/06/09 02:32:49 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
-2020/06/09 02:32:49 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
-2020/06/09 02:32:49 [TRACE] Executing graph transform *terraform.graphTransformerMulti
-2020/06/09 02:32:49 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
-2020/06/09 02:32:49 [TRACE] ProviderConfigTransformer: attaching to "provider.movie" provider configuration from main.tf:1,1-17
-2020/06/09 02:32:49 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
-movie_store.comedy - *terraform.NodeApplyableResourceInstance
-  movie_store.comedy (prepare state) - *terraform.NodeApplyableResource
-movie_store.comedy (prepare state) - *terraform.NodeApplyableResource
-provider.movie - *terraform.NodeApplyableProvider
-------
-2020/06/09 02:32:49 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
-2020/06/09 02:32:49 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
-2020/06/09 02:32:49 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
-2020/06/09 02:32:49 [TRACE] ProviderTransformer: movie_store.comedy is provided by provider.movie or inherited equivalent
-2020/06/09 02:32:49 [TRACE] ProviderTransformer: movie_store.comedy (prepare state) is provided by provider.movie or inherited equivalent
-2020/06/09 02:32:49 [TRACE] ProviderTransformer: exact match for provider.movie serving movie_store.comedy
-2020/06/09 02:32:49 [DEBUG] ProviderTransformer: "movie_store.comedy" (*terraform.NodeApplyableResourceInstance) needs provider.movie
-2020/06/09 02:32:49 [TRACE] ProviderTransformer: exact match for provider.movie serving movie_store.comedy (prepare state)
-2020/06/09 02:32:49 [DEBUG] ProviderTransformer: "movie_store.comedy (prepare state)" (*terraform.NodeApplyableResource) needs provider.movie
-2020/06/09 02:32:49 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
-movie_store.comedy - *terraform.NodeApplyableResourceInstance
-  movie_store.comedy (prepare state) - *terraform.NodeApplyableResource
-  provider.movie - *terraform.NodeApplyableProvider
-movie_store.comedy (prepare state) - *terraform.NodeApplyableResource
-  provider.movie - *terraform.NodeApplyableProvider
-provider.movie - *terraform.NodeApplyableProvider
-------
-2020/06/09 02:32:49 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
-2020/06/09 02:32:49 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
-2020/06/09 02:32:49 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
-2020/06/09 02:32:49 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
-2020/06/09 02:32:49 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
-movie_store.comedy - *terraform.NodeApplyableResourceInstance
-  movie_store.comedy (prepare state) - *terraform.NodeApplyableResource
-  provider.movie - *terraform.NodeApplyableProvider
-movie_store.comedy (prepare state) - *terraform.NodeApplyableResource
-  provider.movie - *terraform.NodeApplyableProvider
-provider.movie - *terraform.NodeApplyableProvider
-------
-2020/06/09 02:32:49 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
-2020/06/09 02:32:49 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
-2020/06/09 02:32:49 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
-2020/06/09 02:32:49 [TRACE] AttachSchemaTransformer: attaching resource schema to movie_store.comedy (prepare state)
-2020/06/09 02:32:49 [TRACE] AttachSchemaTransformer: attaching resource schema to movie_store.comedy
-2020/06/09 02:32:49 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider.movie
-2020/06/09 02:32:49 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
-2020/06/09 02:32:49 [TRACE] Executing graph transform *terraform.ReferenceTransformer
-2020/06/09 02:32:49 [DEBUG] ReferenceTransformer: "movie_store.comedy (prepare state)" references: []
-2020/06/09 02:32:49 [DEBUG] ReferenceTransformer: "movie_store.comedy" references: []
-2020/06/09 02:32:49 [DEBUG] ReferenceTransformer: "provider.movie" references: []
-2020/06/09 02:32:49 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
-2020/06/09 02:32:49 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
-2020/06/09 02:32:49 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
 meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
-  movie_store.comedy - *terraform.NodeApplyableResourceInstance
-  movie_store.comedy (prepare state) - *terraform.NodeApplyableResource
-  provider.movie - *terraform.NodeApplyableProvider
-movie_store.comedy - *terraform.NodeApplyableResourceInstance
-  movie_store.comedy (prepare state) - *terraform.NodeApplyableResource
-  provider.movie - *terraform.NodeApplyableProvider
-movie_store.comedy (prepare state) - *terraform.NodeApplyableResource
-  provider.movie - *terraform.NodeApplyableProvider
-provider.movie - *terraform.NodeApplyableProvider
-------
-2020/06/09 02:32:49 [TRACE] Executing graph transform *terraform.TargetsTransformer
-2020/06/09 02:32:49 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
-2020/06/09 02:32:49 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
-2020/06/09 02:32:49 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
-meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
-  movie_store.comedy - *terraform.NodeApplyableResourceInstance
-  movie_store.comedy (prepare state) - *terraform.NodeApplyableResource
-  provider.movie - *terraform.NodeApplyableProvider
-movie_store.comedy - *terraform.NodeApplyableResourceInstance
-  movie_store.comedy (prepare state) - *terraform.NodeApplyableResource
-  provider.movie - *terraform.NodeApplyableProvider
-movie_store.comedy (prepare state) - *terraform.NodeApplyableResource
-  provider.movie - *terraform.NodeApplyableProvider
-provider.movie - *terraform.NodeApplyableProvider
-provider.movie (close) - *terraform.graphNodeCloseProvider
-  movie_store.comedy - *terraform.NodeApplyableResourceInstance
-  movie_store.comedy (prepare state) - *terraform.NodeApplyableResource
-  provider.movie - *terraform.NodeApplyableProvider
-------
-2020/06/09 02:32:49 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
-2020/06/09 02:32:49 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer (no changes)
-2020/06/09 02:32:49 [TRACE] Executing graph transform *terraform.RootTransformer
-2020/06/09 02:32:49 [TRACE] Completed graph transform *terraform.RootTransformer with new graph:
-meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
-  movie_store.comedy - *terraform.NodeApplyableResourceInstance
-  movie_store.comedy (prepare state) - *terraform.NodeApplyableResource
-  provider.movie - *terraform.NodeApplyableProvider
-movie_store.comedy - *terraform.NodeApplyableResourceInstance
-  movie_store.comedy (prepare state) - *terraform.NodeApplyableResource
-  provider.movie - *terraform.NodeApplyableProvider
-movie_store.comedy (prepare state) - *terraform.NodeApplyableResource
-  provider.movie - *terraform.NodeApplyableProvider
-provider.movie - *terraform.NodeApplyableProvider
-provider.movie (close) - *terraform.graphNodeCloseProvider
-  movie_store.comedy - *terraform.NodeApplyableResourceInstance
-  movie_store.comedy (prepare state) - *terraform.NodeApplyableResource
-  provider.movie - *terraform.NodeApplyableProvider
+  store_movies.saw - *terraform.NodePlannableResource
+provider.store - *terraform.NodeApplyableProvider
+provider.store (close) - *terraform.graphNodeCloseProvider
+  store_movies.saw - *terraform.NodePlannableResource
 root - terraform.graphNodeRoot
   meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
-  provider.movie (close) - *terraform.graphNodeCloseProvider
+  provider.store (close) - *terraform.graphNodeCloseProvider
+store_movies.saw - *terraform.NodePlannableResource
+  provider.store - *terraform.NodeApplyableProvider
 ------
-2020/06/09 02:32:49 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
-2020/06/09 02:32:49 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+2020/06/15 02:10:09 [DEBUG] Starting graph walk: walkPlan
+2020/06/15 02:10:09 [TRACE] dag/walk: updating graph
+2020/06/15 02:10:09 [TRACE] dag/walk: added new vertex: "provider.store (close)"
+2020/06/15 02:10:09 [TRACE] dag/walk: added new vertex: "root"
+2020/06/15 02:10:09 [TRACE] dag/walk: added new vertex: "store_movies.saw"
+2020/06/15 02:10:09 [TRACE] dag/walk: added new vertex: "provider.store"
+2020/06/15 02:10:09 [TRACE] dag/walk: added new vertex: "meta.count-boundary (EachMode fixup)"
+2020/06/15 02:10:09 [TRACE] dag/walk: added edge: "provider.store (close)" waiting on "store_movies.saw"
+2020/06/15 02:10:09 [TRACE] dag/walk: added edge: "root" waiting on "meta.count-boundary (EachMode fixup)"
+2020/06/15 02:10:09 [TRACE] dag/walk: added edge: "root" waiting on "provider.store (close)"
+2020/06/15 02:10:09 [TRACE] dag/walk: added edge: "store_movies.saw" waiting on "provider.store"
+2020/06/15 02:10:09 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "store_movies.saw"
+2020/06/15 02:10:09 [TRACE] dag/walk: dependencies changed for "provider.store (close)", sending new deps
+2020/06/15 02:10:09 [TRACE] dag/walk: dependencies changed for "root", sending new deps
+2020/06/15 02:10:09 [TRACE] dag/walk: dependencies changed for "store_movies.saw", sending new deps
+2020/06/15 02:10:09 [TRACE] dag/walk: dependencies changed for "meta.count-boundary (EachMode fixup)", sending new deps
+2020/06/15 02:10:09 [TRACE] dag/walk: visiting "provider.store"
+2020/06/15 02:10:09 [TRACE] vertex "provider.store": starting visit (*terraform.NodeApplyableProvider)
+2020/06/15 02:10:09 [TRACE] vertex "provider.store": evaluating
+2020/06/15 02:10:09 [TRACE] [walkPlan] Entering eval tree: provider.store
+2020/06/15 02:10:09 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/06/15 02:10:09 [TRACE] <root>: eval: *terraform.EvalInitProvider
+2020-06-15T02:10:09.792-0400 [INFO]  plugin: configuring client automatic mTLS
+2020-06-15T02:10:09.816-0400 [DEBUG] plugin: starting plugin: path=/Users/chrisy/Documents/GO/terraplugin/terraform-provider-store args=[/Users/chrisy/Documents/GO/terraplugin/terraform-provider-store]
+2020-06-15T02:10:09.819-0400 [DEBUG] plugin: plugin started: path=/Users/chrisy/Documents/GO/terraplugin/terraform-provider-store pid=91409
+2020-06-15T02:10:09.819-0400 [DEBUG] plugin: waiting for RPC address: path=/Users/chrisy/Documents/GO/terraplugin/terraform-provider-store
+2020-06-15T02:10:09.835-0400 [INFO]  plugin.terraform-provider-store: configuring server automatic mTLS: timestamp=2020-06-15T02:10:09.835-0400
+2020-06-15T02:10:09.858-0400 [DEBUG] plugin: using plugin: version=5
+2020-06-15T02:10:09.858-0400 [DEBUG] plugin.terraform-provider-store: plugin address: address=/var/folders/5k/01p9rr_x4194p99qtvgt_bxr0000gn/T/plugin796535108 network=unix timestamp=2020-06-15T02:10:09.858-0400
+2020/06/15 02:10:09 [TRACE] BuiltinEvalContext: Initialized "store" provider for provider.store
+2020/06/15 02:10:09 [TRACE] <root>: eval: terraform.EvalNoop
+2020/06/15 02:10:09 [TRACE] <root>: eval: terraform.EvalNoop
+2020/06/15 02:10:09 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2020/06/15 02:10:09 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/06/15 02:10:09 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/06/15 02:10:09 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2020/06/15 02:10:09 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/06/15 02:10:09 [TRACE] <root>: eval: *terraform.EvalConfigProvider
+2020/06/15 02:10:09 [TRACE] buildProviderConfig for provider.store: using explicit config only
+2020/06/15 02:10:09 [TRACE] GRPCProvider: GetSchema
+2020/06/15 02:10:09 [TRACE] GRPCProvider: Configure
+2020/06/15 02:10:09 [TRACE] [walkPlan] Exiting eval tree: provider.store
+2020/06/15 02:10:09 [TRACE] vertex "provider.store": visit complete
+2020/06/15 02:10:09 [TRACE] dag/walk: visiting "store_movies.saw"
+2020/06/15 02:10:09 [TRACE] vertex "store_movies.saw": starting visit (*terraform.NodePlannableResource)
+2020/06/15 02:10:09 [TRACE] vertex "store_movies.saw": evaluating
+2020/06/15 02:10:09 [TRACE] [walkPlan] Entering eval tree: store_movies.saw
+2020/06/15 02:10:09 [TRACE] <root>: eval: *terraform.EvalWriteResourceState
+2020/06/15 02:10:09 [TRACE] [walkPlan] Exiting eval tree: store_movies.saw
+2020/06/15 02:10:09 [TRACE] vertex "store_movies.saw": expanding dynamic subgraph
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
+store_movies.saw - *terraform.NodePlannableResourceInstance
+------
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.OrphanResourceCountTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.OrphanResourceCountTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/06/15 02:10:09 [DEBUG] Resource instance state not found for node "store_movies.saw", instance store_movies.saw
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/06/15 02:10:09 [DEBUG] ReferenceTransformer: "store_movies.saw" references: []
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/06/15 02:10:09 [TRACE] Completed graph transform *terraform.RootTransformer (no changes)
+2020/06/15 02:10:09 [TRACE] vertex "store_movies.saw": entering dynamic subgraph
+2020/06/15 02:10:09 [TRACE] dag/walk: updating graph
+2020/06/15 02:10:09 [TRACE] dag/walk: added new vertex: "store_movies.saw"
+2020/06/15 02:10:09 [TRACE] dag/walk: visiting "store_movies.saw"
+2020/06/15 02:10:09 [TRACE] vertex "store_movies.saw": starting visit (*terraform.NodePlannableResourceInstance)
+2020/06/15 02:10:09 [TRACE] vertex "store_movies.saw": evaluating
+2020/06/15 02:10:09 [TRACE] [walkPlan] Entering eval tree: store_movies.saw
+2020/06/15 02:10:09 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/06/15 02:10:09 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/06/15 02:10:09 [TRACE] <root>: eval: *terraform.EvalReadState
+2020/06/15 02:10:09 [TRACE] EvalReadState: reading state for store_movies.saw
+2020/06/15 02:10:09 [TRACE] EvalReadState: no state present for store_movies.saw
+2020/06/15 02:10:09 [TRACE] <root>: eval: *terraform.EvalValidateSelfRef
+2020/06/15 02:10:09 [TRACE] <root>: eval: *terraform.EvalDiff
+2020/06/15 02:10:09 [TRACE] Re-validating config for "store_movies.saw"
+2020/06/15 02:10:09 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/06/15 02:10:09 [TRACE] GRPCProvider: PlanResourceChange
+2020/06/15 02:10:09 [TRACE] <root>: eval: *terraform.EvalCheckPreventDestroy
+2020/06/15 02:10:09 [TRACE] <root>: eval: *terraform.EvalWriteState
+2020/06/15 02:10:09 [TRACE] EvalWriteState: writing current state object for store_movies.saw
+2020/06/15 02:10:09 [TRACE] <root>: eval: *terraform.EvalWriteDiff
+2020/06/15 02:10:09 [TRACE] EvalWriteDiff: recorded Create change for store_movies.saw
+2020/06/15 02:10:09 [TRACE] [walkPlan] Exiting eval tree: store_movies.saw
+2020/06/15 02:10:09 [TRACE] vertex "store_movies.saw": visit complete
+2020/06/15 02:10:09 [TRACE] vertex "store_movies.saw": dynamic subgraph completed successfully
+2020/06/15 02:10:09 [TRACE] vertex "store_movies.saw": visit complete
+2020/06/15 02:10:09 [TRACE] dag/walk: visiting "provider.store (close)"
+2020/06/15 02:10:09 [TRACE] vertex "provider.store (close)": starting visit (*terraform.graphNodeCloseProvider)
+2020/06/15 02:10:09 [TRACE] dag/walk: visiting "meta.count-boundary (EachMode fixup)"
+2020/06/15 02:10:09 [TRACE] vertex "meta.count-boundary (EachMode fixup)": starting visit (*terraform.NodeCountBoundary)
+2020/06/15 02:10:09 [TRACE] vertex "provider.store (close)": evaluating
+2020/06/15 02:10:09 [TRACE] [walkPlan] Entering eval tree: provider.store (close)
+2020/06/15 02:10:09 [TRACE] vertex "meta.count-boundary (EachMode fixup)": evaluating
+2020/06/15 02:10:09 [TRACE] [walkPlan] Entering eval tree: meta.count-boundary (EachMode fixup)
+2020/06/15 02:10:09 [TRACE] <root>: eval: *terraform.EvalCloseProvider
+2020/06/15 02:10:09 [TRACE] GRPCProvider: Close
+2020/06/15 02:10:09 [TRACE] <root>: eval: *terraform.EvalCountFixZeroOneBoundaryGlobal
+2020/06/15 02:10:09 [TRACE] [walkPlan] Exiting eval tree: meta.count-boundary (EachMode fixup)
+2020/06/15 02:10:09 [TRACE] vertex "meta.count-boundary (EachMode fixup)": visit complete
+2020-06-15T02:10:09.913-0400 [DEBUG] plugin: plugin process exited: path=/Users/chrisy/Documents/GO/terraplugin/terraform-provider-store pid=91409
+2020-06-15T02:10:09.913-0400 [DEBUG] plugin: plugin exited
+2020/06/15 02:10:09 [TRACE] [walkPlan] Exiting eval tree: provider.store (close)
+2020/06/15 02:10:09 [TRACE] vertex "provider.store (close)": visit complete
+2020/06/15 02:10:09 [TRACE] dag/walk: visiting "root"
+2020/06/15 02:10:09 [TRACE] vertex "root": starting visit (terraform.graphNodeRoot)
+2020/06/15 02:10:09 [TRACE] vertex "root": visit complete
+2020/06/15 02:10:09 [DEBUG] command: asking for input: "Do you want to perform these actions?"
+2020/06/15 02:10:12 [INFO] backend/local: apply calling Apply
+2020/06/15 02:10:12 [INFO] terraform: building graph: GraphTypeApply
+2020/06/15 02:10:12 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/06/15 02:10:12 [TRACE] ConfigTransformer: Starting for path: 
+2020/06/15 02:10:12 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+store_movies.saw (prepare state) - *terraform.NodeApplyableResource
+------
+2020/06/15 02:10:12 [TRACE] Executing graph transform *terraform.DiffTransformer
+2020/06/15 02:10:12 [TRACE] DiffTransformer starting
+2020/06/15 02:10:12 [TRACE] DiffTransformer: found Create change for store_movies.saw 
+2020/06/15 02:10:12 [TRACE] DiffTransformer: store_movies.saw will be represented by store_movies.saw
+2020/06/15 02:10:12 [TRACE] DiffTransformer complete
+2020/06/15 02:10:12 [TRACE] Completed graph transform *terraform.DiffTransformer with new graph:
+store_movies.saw - *terraform.NodeApplyableResourceInstance
+  store_movies.saw (prepare state) - *terraform.NodeApplyableResource
+store_movies.saw (prepare state) - *terraform.NodeApplyableResource
+------
+2020/06/15 02:10:12 [TRACE] Executing graph transform *terraform.OrphanResourceTransformer
+2020/06/15 02:10:12 [TRACE] Completed graph transform *terraform.OrphanResourceTransformer (no changes)
+2020/06/15 02:10:12 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2020/06/15 02:10:12 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2020/06/15 02:10:12 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2020/06/15 02:10:12 [TRACE] AttachResourceConfigTransformer: attaching to "store_movies.saw (prepare state)" (*terraform.NodeApplyableResource) config from main.tf:11,1-30
+2020/06/15 02:10:12 [TRACE] AttachResourceConfigTransformer: attaching to "store_movies.saw" (*terraform.NodeApplyableResourceInstance) config from main.tf:11,1-30
+2020/06/15 02:10:12 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2020/06/15 02:10:12 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/06/15 02:10:12 [DEBUG] Resource state not found for node "store_movies.saw", instance store_movies.saw
+2020/06/15 02:10:12 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/06/15 02:10:12 [TRACE] Executing graph transform *terraform.DestroyEdgeTransformer
+2020/06/15 02:10:12 [TRACE] Completed graph transform *terraform.DestroyEdgeTransformer (no changes)
+2020/06/15 02:10:12 [TRACE] Executing graph transform *terraform.CBDEdgeTransformer
+2020/06/15 02:10:12 [TRACE] Completed graph transform *terraform.CBDEdgeTransformer (no changes)
+2020/06/15 02:10:12 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2020/06/15 02:10:12 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2020/06/15 02:10:12 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2020/06/15 02:10:12 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2020/06/15 02:10:12 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2020/06/15 02:10:12 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2020/06/15 02:10:12 [TRACE] Executing graph transform *terraform.LocalTransformer
+2020/06/15 02:10:12 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2020/06/15 02:10:12 [TRACE] Executing graph transform *terraform.OutputTransformer
+2020/06/15 02:10:12 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2020/06/15 02:10:12 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2020/06/15 02:10:12 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2020/06/15 02:10:12 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2020/06/15 02:10:12 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2020/06/15 02:10:12 [TRACE] ProviderConfigTransformer: attaching to "provider.store" provider configuration from main.tf:1,1-17
+2020/06/15 02:10:12 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+provider.store - *terraform.NodeApplyableProvider
+store_movies.saw - *terraform.NodeApplyableResourceInstance
+  store_movies.saw (prepare state) - *terraform.NodeApplyableResource
+store_movies.saw (prepare state) - *terraform.NodeApplyableResource
+------
+2020/06/15 02:10:12 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2020/06/15 02:10:12 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2020/06/15 02:10:12 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2020/06/15 02:10:12 [TRACE] ProviderTransformer: store_movies.saw (prepare state) is provided by provider.store or inherited equivalent
+2020/06/15 02:10:12 [TRACE] ProviderTransformer: store_movies.saw is provided by provider.store or inherited equivalent
+2020/06/15 02:10:12 [TRACE] ProviderTransformer: exact match for provider.store serving store_movies.saw (prepare state)
+2020/06/15 02:10:12 [DEBUG] ProviderTransformer: "store_movies.saw (prepare state)" (*terraform.NodeApplyableResource) needs provider.store
+2020/06/15 02:10:12 [TRACE] ProviderTransformer: exact match for provider.store serving store_movies.saw
+2020/06/15 02:10:12 [DEBUG] ProviderTransformer: "store_movies.saw" (*terraform.NodeApplyableResourceInstance) needs provider.store
+2020/06/15 02:10:12 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+provider.store - *terraform.NodeApplyableProvider
+store_movies.saw - *terraform.NodeApplyableResourceInstance
+  provider.store - *terraform.NodeApplyableProvider
+  store_movies.saw (prepare state) - *terraform.NodeApplyableResource
+store_movies.saw (prepare state) - *terraform.NodeApplyableResource
+  provider.store - *terraform.NodeApplyableProvider
+------
+2020/06/15 02:10:12 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2020/06/15 02:10:12 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2020/06/15 02:10:12 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2020/06/15 02:10:12 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2020/06/15 02:10:12 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+provider.store - *terraform.NodeApplyableProvider
+store_movies.saw - *terraform.NodeApplyableResourceInstance
+  provider.store - *terraform.NodeApplyableProvider
+  store_movies.saw (prepare state) - *terraform.NodeApplyableResource
+store_movies.saw (prepare state) - *terraform.NodeApplyableResource
+  provider.store - *terraform.NodeApplyableProvider
+------
+2020/06/15 02:10:12 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2020/06/15 02:10:12 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2020/06/15 02:10:12 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2020/06/15 02:10:12 [TRACE] AttachSchemaTransformer: attaching resource schema to store_movies.saw
+2020/06/15 02:10:12 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider.store
+2020/06/15 02:10:12 [TRACE] AttachSchemaTransformer: attaching resource schema to store_movies.saw (prepare state)
+2020/06/15 02:10:12 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2020/06/15 02:10:12 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/06/15 02:10:12 [DEBUG] ReferenceTransformer: "store_movies.saw (prepare state)" references: []
+2020/06/15 02:10:12 [DEBUG] ReferenceTransformer: "store_movies.saw" references: []
+2020/06/15 02:10:12 [DEBUG] ReferenceTransformer: "provider.store" references: []
+2020/06/15 02:10:12 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/06/15 02:10:12 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2020/06/15 02:10:12 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
 meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
-  movie_store.comedy - *terraform.NodeApplyableResourceInstance
-movie_store.comedy - *terraform.NodeApplyableResourceInstance
-  movie_store.comedy (prepare state) - *terraform.NodeApplyableResource
-movie_store.comedy (prepare state) - *terraform.NodeApplyableResource
-  provider.movie - *terraform.NodeApplyableProvider
-provider.movie - *terraform.NodeApplyableProvider
-provider.movie (close) - *terraform.graphNodeCloseProvider
-  movie_store.comedy - *terraform.NodeApplyableResourceInstance
+  provider.store - *terraform.NodeApplyableProvider
+  store_movies.saw - *terraform.NodeApplyableResourceInstance
+  store_movies.saw (prepare state) - *terraform.NodeApplyableResource
+provider.store - *terraform.NodeApplyableProvider
+store_movies.saw - *terraform.NodeApplyableResourceInstance
+  provider.store - *terraform.NodeApplyableProvider
+  store_movies.saw (prepare state) - *terraform.NodeApplyableResource
+store_movies.saw (prepare state) - *terraform.NodeApplyableResource
+  provider.store - *terraform.NodeApplyableProvider
+------
+2020/06/15 02:10:12 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/06/15 02:10:12 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/06/15 02:10:12 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2020/06/15 02:10:12 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  provider.store - *terraform.NodeApplyableProvider
+  store_movies.saw - *terraform.NodeApplyableResourceInstance
+  store_movies.saw (prepare state) - *terraform.NodeApplyableResource
+provider.store - *terraform.NodeApplyableProvider
+provider.store (close) - *terraform.graphNodeCloseProvider
+  provider.store - *terraform.NodeApplyableProvider
+  store_movies.saw - *terraform.NodeApplyableResourceInstance
+  store_movies.saw (prepare state) - *terraform.NodeApplyableResource
+store_movies.saw - *terraform.NodeApplyableResourceInstance
+  provider.store - *terraform.NodeApplyableProvider
+  store_movies.saw (prepare state) - *terraform.NodeApplyableResource
+store_movies.saw (prepare state) - *terraform.NodeApplyableResource
+  provider.store - *terraform.NodeApplyableProvider
+------
+2020/06/15 02:10:12 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
+2020/06/15 02:10:12 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer (no changes)
+2020/06/15 02:10:12 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/06/15 02:10:12 [TRACE] Completed graph transform *terraform.RootTransformer with new graph:
+meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  provider.store - *terraform.NodeApplyableProvider
+  store_movies.saw - *terraform.NodeApplyableResourceInstance
+  store_movies.saw (prepare state) - *terraform.NodeApplyableResource
+provider.store - *terraform.NodeApplyableProvider
+provider.store (close) - *terraform.graphNodeCloseProvider
+  provider.store - *terraform.NodeApplyableProvider
+  store_movies.saw - *terraform.NodeApplyableResourceInstance
+  store_movies.saw (prepare state) - *terraform.NodeApplyableResource
 root - terraform.graphNodeRoot
   meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
-  provider.movie (close) - *terraform.graphNodeCloseProvider
+  provider.store (close) - *terraform.graphNodeCloseProvider
+store_movies.saw - *terraform.NodeApplyableResourceInstance
+  provider.store - *terraform.NodeApplyableProvider
+  store_movies.saw (prepare state) - *terraform.NodeApplyableResource
+store_movies.saw (prepare state) - *terraform.NodeApplyableResource
+  provider.store - *terraform.NodeApplyableProvider
 ------
-2020/06/09 02:32:49 [DEBUG] Starting graph walk: walkApply
-2020/06/09 02:32:49 [TRACE] dag/walk: updating graph
-2020/06/09 02:32:49 [TRACE] dag/walk: added new vertex: "provider.movie (close)"
-2020/06/09 02:32:49 [TRACE] dag/walk: added new vertex: "root"
-2020/06/09 02:32:49 [TRACE] dag/walk: added new vertex: "movie_store.comedy (prepare state)"
-2020/06/09 02:32:49 [TRACE] dag/walk: added new vertex: "movie_store.comedy"
-2020/06/09 02:32:49 [TRACE] dag/walk: added new vertex: "provider.movie"
-2020/06/09 02:32:49 [TRACE] dag/walk: added new vertex: "meta.count-boundary (EachMode fixup)"
-2020/06/09 02:32:49 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "movie_store.comedy"
-2020/06/09 02:32:49 [TRACE] dag/walk: added edge: "root" waiting on "meta.count-boundary (EachMode fixup)"
-2020/06/09 02:32:49 [TRACE] dag/walk: added edge: "root" waiting on "provider.movie (close)"
-2020/06/09 02:32:49 [TRACE] dag/walk: added edge: "movie_store.comedy" waiting on "movie_store.comedy (prepare state)"
-2020/06/09 02:32:49 [TRACE] dag/walk: added edge: "movie_store.comedy (prepare state)" waiting on "provider.movie"
-2020/06/09 02:32:49 [TRACE] dag/walk: added edge: "provider.movie (close)" waiting on "movie_store.comedy"
-2020/06/09 02:32:49 [TRACE] dag/walk: dependencies changed for "meta.count-boundary (EachMode fixup)", sending new deps
-2020/06/09 02:32:49 [TRACE] dag/walk: dependencies changed for "root", sending new deps
-2020/06/09 02:32:49 [TRACE] dag/walk: dependencies changed for "movie_store.comedy", sending new deps
-2020/06/09 02:32:49 [TRACE] dag/walk: dependencies changed for "movie_store.comedy (prepare state)", sending new deps
-2020/06/09 02:32:49 [TRACE] dag/walk: dependencies changed for "provider.movie (close)", sending new deps
-2020/06/09 02:32:49 [TRACE] dag/walk: visiting "provider.movie"
-2020/06/09 02:32:49 [TRACE] vertex "provider.movie": starting visit (*terraform.NodeApplyableProvider)
-2020/06/09 02:32:49 [TRACE] vertex "provider.movie": evaluating
-2020/06/09 02:32:49 [TRACE] [walkApply] Entering eval tree: provider.movie
-2020/06/09 02:32:49 [TRACE] <root>: eval: *terraform.EvalSequence
-2020/06/09 02:32:49 [TRACE] <root>: eval: *terraform.EvalInitProvider
-2020-06-09T02:32:49.398-0400 [INFO]  plugin: configuring client automatic mTLS
-2020-06-09T02:32:49.444-0400 [DEBUG] plugin: starting plugin: path=/Users/chrisy/Documents/GO/terraplugin/terraform-provider-movie args=[/Users/chrisy/Documents/GO/terraplugin/terraform-provider-movie]
-2020-06-09T02:32:49.450-0400 [DEBUG] plugin: plugin started: path=/Users/chrisy/Documents/GO/terraplugin/terraform-provider-movie pid=35494
-2020-06-09T02:32:49.450-0400 [DEBUG] plugin: waiting for RPC address: path=/Users/chrisy/Documents/GO/terraplugin/terraform-provider-movie
-2020-06-09T02:32:49.481-0400 [INFO]  plugin.terraform-provider-movie: configuring server automatic mTLS: timestamp=2020-06-09T02:32:49.481-0400
-2020-06-09T02:32:49.528-0400 [DEBUG] plugin: using plugin: version=5
-2020-06-09T02:32:49.528-0400 [DEBUG] plugin.terraform-provider-movie: plugin address: address=/var/folders/5k/01p9rr_x4194p99qtvgt_bxr0000gn/T/plugin087828541 network=unix timestamp=2020-06-09T02:32:49.527-0400
-2020/06/09 02:32:49 [TRACE] BuiltinEvalContext: Initialized "movie" provider for provider.movie
-2020/06/09 02:32:49 [TRACE] <root>: eval: terraform.EvalNoop
-2020/06/09 02:32:49 [TRACE] <root>: eval: terraform.EvalNoop
-2020/06/09 02:32:49 [TRACE] <root>: eval: *terraform.EvalOpFilter
-2020/06/09 02:32:49 [TRACE] <root>: eval: *terraform.EvalSequence
-2020/06/09 02:32:49 [TRACE] <root>: eval: *terraform.EvalGetProvider
-2020/06/09 02:32:49 [TRACE] <root>: eval: *terraform.EvalOpFilter
-2020/06/09 02:32:49 [TRACE] <root>: eval: *terraform.EvalSequence
-2020/06/09 02:32:49 [TRACE] <root>: eval: *terraform.EvalConfigProvider
-2020/06/09 02:32:49 [TRACE] buildProviderConfig for provider.movie: using explicit config only
-2020/06/09 02:32:49 [TRACE] GRPCProvider: GetSchema
-2020/06/09 02:32:49 [TRACE] GRPCProvider: Configure
-2020/06/09 02:32:49 [TRACE] [walkApply] Exiting eval tree: provider.movie
-2020/06/09 02:32:49 [TRACE] vertex "provider.movie": visit complete
-2020/06/09 02:32:49 [TRACE] dag/walk: visiting "movie_store.comedy (prepare state)"
-2020/06/09 02:32:49 [TRACE] vertex "movie_store.comedy (prepare state)": starting visit (*terraform.NodeApplyableResource)
-2020/06/09 02:32:49 [TRACE] vertex "movie_store.comedy (prepare state)": evaluating
-2020/06/09 02:32:49 [TRACE] [walkApply] Entering eval tree: movie_store.comedy (prepare state)
-2020/06/09 02:32:49 [TRACE] <root>: eval: *terraform.EvalWriteResourceState
-2020/06/09 02:32:49 [TRACE] [walkApply] Exiting eval tree: movie_store.comedy (prepare state)
-2020/06/09 02:32:49 [TRACE] vertex "movie_store.comedy (prepare state)": visit complete
-2020/06/09 02:32:49 [TRACE] dag/walk: visiting "movie_store.comedy"
-2020/06/09 02:32:49 [TRACE] vertex "movie_store.comedy": starting visit (*terraform.NodeApplyableResourceInstance)
-2020/06/09 02:32:49 [TRACE] vertex "movie_store.comedy": evaluating
-2020/06/09 02:32:49 [TRACE] [walkApply] Entering eval tree: movie_store.comedy
-2020/06/09 02:32:49 [TRACE] <root>: eval: *terraform.EvalSequence
-2020/06/09 02:32:49 [TRACE] <root>: eval: *terraform.EvalGetProvider
-2020/06/09 02:32:49 [TRACE] <root>: eval: *terraform.EvalReadDiff
-2020/06/09 02:32:49 [TRACE] EvalReadDiff: Read Create change from plan for movie_store.comedy
-2020/06/09 02:32:49 [TRACE] <root>: eval: *terraform.EvalIf
-2020/06/09 02:32:49 [TRACE] <root>: eval: terraform.EvalNoop
-2020/06/09 02:32:49 [TRACE] <root>: eval: *terraform.EvalIf
-2020/06/09 02:32:49 [TRACE] <root>: eval: *terraform.EvalReadState
-2020/06/09 02:32:49 [TRACE] EvalReadState: reading state for movie_store.comedy
-2020/06/09 02:32:49 [TRACE] EvalReadState: no state present for movie_store.comedy
-2020/06/09 02:32:49 [TRACE] <root>: eval: *terraform.EvalReadDiff
-2020/06/09 02:32:49 [TRACE] EvalReadDiff: Read Create change from plan for movie_store.comedy
-2020/06/09 02:32:49 [TRACE] <root>: eval: *terraform.EvalDiff
-2020/06/09 02:32:49 [TRACE] Re-validating config for "movie_store.comedy"
-2020/06/09 02:32:49 [TRACE] GRPCProvider: ValidateResourceTypeConfig
-2020/06/09 02:32:49 [TRACE] GRPCProvider: PlanResourceChange
-2020/06/09 02:32:49 [TRACE] <root>: eval: *terraform.EvalCheckPlannedChange
-2020/06/09 02:32:49 [TRACE] EvalCheckPlannedChange: Verifying that actual change (action Create) matches planned change (action Create)
-2020/06/09 02:32:49 [TRACE] <root>: eval: *terraform.EvalGetProvider
-2020/06/09 02:32:49 [TRACE] <root>: eval: *terraform.EvalReadState
-2020/06/09 02:32:49 [TRACE] EvalReadState: reading state for movie_store.comedy
-2020/06/09 02:32:49 [TRACE] EvalReadState: no state present for movie_store.comedy
-2020/06/09 02:32:49 [TRACE] <root>: eval: *terraform.EvalReduceDiff
-2020/06/09 02:32:49 [TRACE] <root>: eval: *terraform.EvalIf
-2020/06/09 02:32:49 [TRACE] <root>: eval: terraform.EvalNoop
-2020/06/09 02:32:49 [TRACE] <root>: eval: *terraform.EvalApplyPre
-2020/06/09 02:32:49 [TRACE] <root>: eval: *terraform.EvalApply
-2020/06/09 02:32:49 [DEBUG] movie_store.comedy: applying the planned Create change
-2020/06/09 02:32:49 [TRACE] GRPCProvider: ApplyResourceChange
-2020-06-09T02:32:49.630-0400 [DEBUG] plugin.terraform-provider-movie: panic: interface conversion: interface {} is *client.Client, not *client.Client (types from different packages)
-2020-06-09T02:32:49.630-0400 [DEBUG] plugin.terraform-provider-movie: 
-2020-06-09T02:32:49.630-0400 [DEBUG] plugin.terraform-provider-movie: goroutine 11 [running]:
-2020-06-09T02:32:49.630-0400 [DEBUG] plugin.terraform-provider-movie: github.com/milamice62/terraplugin/provider.createGenre(0xc0002a6a10, 0x1bd1220, 0xc0000b0ae0, 0x2, 0x26ee7e0)
-2020-06-09T02:32:49.630-0400 [DEBUG] plugin.terraform-provider-movie: 	/Users/chrisy/Documents/GO/terraplugin/provider/genres.go:33 +0x150
-2020-06-09T02:32:49.630-0400 [DEBUG] plugin.terraform-provider-movie: github.com/hashicorp/terraform/helper/schema.(*Resource).Apply(0xc0002aa300, 0xc0002975e0, 0xc0001aa9a0, 0x1bd1220, 0xc0000b0ae0, 0x1b28901, 0xc000019880, 0xc0006a2c90)
-2020-06-09T02:32:49.630-0400 [DEBUG] plugin.terraform-provider-movie: 	/Users/chrisy/go/pkg/mod/github.com/hashicorp/terraform@v0.12.26/helper/schema/resource.go:305 +0x365
-2020-06-09T02:32:49.630-0400 [DEBUG] plugin.terraform-provider-movie: github.com/hashicorp/terraform/helper/schema.(*Provider).Apply(0xc0002aa380, 0xc000019a00, 0xc0002975e0, 0xc0001aa9a0, 0xc0002f2868, 0xc0000b6028, 0x1b2a9c0)
-2020-06-09T02:32:49.630-0400 [DEBUG] plugin.terraform-provider-movie: 	/Users/chrisy/go/pkg/mod/github.com/hashicorp/terraform@v0.12.26/helper/schema/provider.go:289 +0x99
-2020-06-09T02:32:49.630-0400 [DEBUG] plugin.terraform-provider-movie: github.com/hashicorp/terraform/helper/plugin.(*GRPCProviderServer).ApplyResourceChange(0xc000010080, 0x1f65140, 0xc0006a26c0, 0xc000280720, 0xc000010080, 0xc0006a26c0, 0xc000086b78)
-2020-06-09T02:32:49.630-0400 [DEBUG] plugin.terraform-provider-movie: 	/Users/chrisy/go/pkg/mod/github.com/hashicorp/terraform@v0.12.26/helper/plugin/grpc_provider.go:885 +0x8c4
-2020-06-09T02:32:49.631-0400 [DEBUG] plugin.terraform-provider-movie: github.com/hashicorp/terraform/internal/tfplugin5._Provider_ApplyResourceChange_Handler(0x1c451a0, 0xc000010080, 0x1f65140, 0xc0006a26c0, 0xc0002806c0, 0x0, 0x1f65140, 0xc0006a26c0, 0xc0000489c0, 0x56)
-2020-06-09T02:32:49.631-0400 [DEBUG] plugin.terraform-provider-movie: 	/Users/chrisy/go/pkg/mod/github.com/hashicorp/terraform@v0.12.26/internal/tfplugin5/tfplugin5.pb.go:3189 +0x217
-2020-06-09T02:32:49.631-0400 [DEBUG] plugin.terraform-provider-movie: google.golang.org/grpc.(*Server).processUnaryRPC(0xc000802480, 0x1f70540, 0xc000782780, 0xc000292b00, 0xc0006a20f0, 0x26b47a0, 0x0, 0x0, 0x0)
-2020-06-09T02:32:49.631-0400 [DEBUG] plugin.terraform-provider-movie: 	/Users/chrisy/go/pkg/mod/google.golang.org/grpc@v1.27.1/server.go:1024 +0x501
-2020-06-09T02:32:49.631-0400 [DEBUG] plugin.terraform-provider-movie: google.golang.org/grpc.(*Server).handleStream(0xc000802480, 0x1f70540, 0xc000782780, 0xc000292b00, 0x0)
-2020-06-09T02:32:49.631-0400 [DEBUG] plugin.terraform-provider-movie: 	/Users/chrisy/go/pkg/mod/google.golang.org/grpc@v1.27.1/server.go:1313 +0xd3d
-2020-06-09T02:32:49.631-0400 [DEBUG] plugin.terraform-provider-movie: google.golang.org/grpc.(*Server).serveStreams.func1.1(0xc00028c190, 0xc000802480, 0x1f70540, 0xc000782780, 0xc000292b00)
-2020-06-09T02:32:49.631-0400 [DEBUG] plugin.terraform-provider-movie: 	/Users/chrisy/go/pkg/mod/google.golang.org/grpc@v1.27.1/server.go:722 +0xa1
-2020-06-09T02:32:49.631-0400 [DEBUG] plugin.terraform-provider-movie: created by google.golang.org/grpc.(*Server).serveStreams.func1
-2020-06-09T02:32:49.631-0400 [DEBUG] plugin.terraform-provider-movie: 	/Users/chrisy/go/pkg/mod/google.golang.org/grpc@v1.27.1/server.go:720 +0xa1
-2020/06/09 02:32:49 [DEBUG] movie_store.comedy: apply errored, but we're indicating that via the Error pointer rather than returning it: rpc error: code = Unavailable desc = transport is closing
-2020/06/09 02:32:49 [TRACE] <root>: eval: *terraform.EvalMaybeTainted
-2020/06/09 02:32:49 [TRACE] EvalMaybeTainted: movie_store.comedy encountered an error during creation, so it is now marked as tainted
-2020/06/09 02:32:49 [TRACE] <root>: eval: *terraform.EvalWriteState
-2020/06/09 02:32:49 [TRACE] EvalWriteState: removing state object for movie_store.comedy
-2020/06/09 02:32:49 [TRACE] <root>: eval: *terraform.EvalApplyProvisioners
-2020/06/09 02:32:49 [TRACE] EvalApplyProvisioners: movie_store.comedy has no state, so skipping provisioners
-2020/06/09 02:32:49 [TRACE] <root>: eval: *terraform.EvalMaybeTainted
-2020/06/09 02:32:49 [TRACE] EvalMaybeTainted: movie_store.comedy encountered an error during creation, so it is now marked as tainted
-2020-06-09T02:32:49.634-0400 [DEBUG] plugin: plugin process exited: path=/Users/chrisy/Documents/GO/terraplugin/terraform-provider-movie pid=35494 error="exit status 2"
-2020/06/09 02:32:49 [TRACE] <root>: eval: *terraform.EvalWriteState
-2020/06/09 02:32:49 [TRACE] EvalWriteState: removing state object for movie_store.comedy
-2020/06/09 02:32:49 [TRACE] <root>: eval: *terraform.EvalIf
-2020/06/09 02:32:49 [TRACE] <root>: eval: *terraform.EvalIf
-2020/06/09 02:32:49 [TRACE] <root>: eval: *terraform.EvalWriteDiff
-2020/06/09 02:32:49 [TRACE] <root>: eval: *terraform.EvalApplyPost
-2020/06/09 02:32:49 [ERROR] <root>: eval: *terraform.EvalApplyPost, err: rpc error: code = Unavailable desc = transport is closing
-2020/06/09 02:32:49 [ERROR] <root>: eval: *terraform.EvalSequence, err: rpc error: code = Unavailable desc = transport is closing
-2020/06/09 02:32:49 [TRACE] [walkApply] Exiting eval tree: movie_store.comedy
-2020/06/09 02:32:49 [TRACE] vertex "movie_store.comedy": visit complete
-2020/06/09 02:32:49 [TRACE] dag/walk: upstream of "meta.count-boundary (EachMode fixup)" errored, so skipping
-2020/06/09 02:32:49 [TRACE] dag/walk: upstream of "provider.movie (close)" errored, so skipping
-2020/06/09 02:32:49 [TRACE] dag/walk: upstream of "root" errored, so skipping
-2020/06/09 02:32:49 [TRACE] statemgr.Filesystem: reading latest snapshot from terraform.tfstate
-2020/06/09 02:32:49 [TRACE] statemgr.Filesystem: snapshot file has nil snapshot, but that's okay
-2020/06/09 02:32:49 [TRACE] statemgr.Filesystem: read nil snapshot
-2020/06/09 02:32:49 [TRACE] statemgr.Filesystem: no original state snapshot to back up
-2020/06/09 02:32:49 [TRACE] statemgr.Filesystem: state has changed since last snapshot, so incrementing serial to 1
-2020/06/09 02:32:49 [TRACE] statemgr.Filesystem: writing snapshot at terraform.tfstate
-2020/06/09 02:32:49 [TRACE] statemgr.Filesystem: removing lock metadata file .terraform.tfstate.lock.info
-2020/06/09 02:32:49 [TRACE] statemgr.Filesystem: unlocking terraform.tfstate using fcntl flock
-2020-06-09T02:32:49.646-0400 [DEBUG] plugin: plugin exited
+2020/06/15 02:10:12 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2020/06/15 02:10:12 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  store_movies.saw - *terraform.NodeApplyableResourceInstance
+provider.store - *terraform.NodeApplyableProvider
+provider.store (close) - *terraform.graphNodeCloseProvider
+  store_movies.saw - *terraform.NodeApplyableResourceInstance
+root - terraform.graphNodeRoot
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  provider.store (close) - *terraform.graphNodeCloseProvider
+store_movies.saw - *terraform.NodeApplyableResourceInstance
+  store_movies.saw (prepare state) - *terraform.NodeApplyableResource
+store_movies.saw (prepare state) - *terraform.NodeApplyableResource
+  provider.store - *terraform.NodeApplyableProvider
+------
+2020/06/15 02:10:12 [DEBUG] Starting graph walk: walkApply
+2020/06/15 02:10:12 [TRACE] dag/walk: updating graph
+2020/06/15 02:10:12 [TRACE] dag/walk: added new vertex: "store_movies.saw (prepare state)"
+2020/06/15 02:10:12 [TRACE] dag/walk: added new vertex: "store_movies.saw"
+2020/06/15 02:10:12 [TRACE] dag/walk: added new vertex: "provider.store"
+2020/06/15 02:10:12 [TRACE] dag/walk: added new vertex: "meta.count-boundary (EachMode fixup)"
+2020/06/15 02:10:12 [TRACE] dag/walk: added new vertex: "provider.store (close)"
+2020/06/15 02:10:12 [TRACE] dag/walk: added new vertex: "root"
+2020/06/15 02:10:12 [TRACE] dag/walk: added edge: "root" waiting on "meta.count-boundary (EachMode fixup)"
+2020/06/15 02:10:12 [TRACE] dag/walk: added edge: "store_movies.saw" waiting on "store_movies.saw (prepare state)"
+2020/06/15 02:10:12 [TRACE] dag/walk: added edge: "store_movies.saw (prepare state)" waiting on "provider.store"
+2020/06/15 02:10:12 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "store_movies.saw"
+2020/06/15 02:10:12 [TRACE] dag/walk: added edge: "provider.store (close)" waiting on "store_movies.saw"
+2020/06/15 02:10:12 [TRACE] dag/walk: added edge: "root" waiting on "provider.store (close)"
+2020/06/15 02:10:12 [TRACE] dag/walk: dependencies changed for "provider.store (close)", sending new deps
+2020/06/15 02:10:12 [TRACE] dag/walk: dependencies changed for "root", sending new deps
+2020/06/15 02:10:12 [TRACE] dag/walk: dependencies changed for "store_movies.saw", sending new deps
+2020/06/15 02:10:12 [TRACE] dag/walk: dependencies changed for "store_movies.saw (prepare state)", sending new deps
+2020/06/15 02:10:12 [TRACE] dag/walk: dependencies changed for "meta.count-boundary (EachMode fixup)", sending new deps
+2020/06/15 02:10:12 [TRACE] dag/walk: visiting "provider.store"
+2020/06/15 02:10:12 [TRACE] vertex "provider.store": starting visit (*terraform.NodeApplyableProvider)
+2020/06/15 02:10:12 [TRACE] vertex "provider.store": evaluating
+2020/06/15 02:10:12 [TRACE] [walkApply] Entering eval tree: provider.store
+2020/06/15 02:10:12 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/06/15 02:10:12 [TRACE] <root>: eval: *terraform.EvalInitProvider
+2020-06-15T02:10:12.438-0400 [INFO]  plugin: configuring client automatic mTLS
+2020-06-15T02:10:12.461-0400 [DEBUG] plugin: starting plugin: path=/Users/chrisy/Documents/GO/terraplugin/terraform-provider-store args=[/Users/chrisy/Documents/GO/terraplugin/terraform-provider-store]
+2020-06-15T02:10:12.464-0400 [DEBUG] plugin: plugin started: path=/Users/chrisy/Documents/GO/terraplugin/terraform-provider-store pid=91420
+2020-06-15T02:10:12.465-0400 [DEBUG] plugin: waiting for RPC address: path=/Users/chrisy/Documents/GO/terraplugin/terraform-provider-store
+2020-06-15T02:10:12.481-0400 [INFO]  plugin.terraform-provider-store: configuring server automatic mTLS: timestamp=2020-06-15T02:10:12.480-0400
+2020-06-15T02:10:12.504-0400 [DEBUG] plugin.terraform-provider-store: plugin address: address=/var/folders/5k/01p9rr_x4194p99qtvgt_bxr0000gn/T/plugin137352915 network=unix timestamp=2020-06-15T02:10:12.504-0400
+2020-06-15T02:10:12.504-0400 [DEBUG] plugin: using plugin: version=5
+2020/06/15 02:10:12 [TRACE] BuiltinEvalContext: Initialized "store" provider for provider.store
+2020/06/15 02:10:12 [TRACE] <root>: eval: terraform.EvalNoop
+2020/06/15 02:10:12 [TRACE] <root>: eval: terraform.EvalNoop
+2020/06/15 02:10:12 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2020/06/15 02:10:12 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/06/15 02:10:12 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/06/15 02:10:12 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2020/06/15 02:10:12 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/06/15 02:10:12 [TRACE] <root>: eval: *terraform.EvalConfigProvider
+2020/06/15 02:10:12 [TRACE] buildProviderConfig for provider.store: using explicit config only
+2020/06/15 02:10:12 [TRACE] GRPCProvider: GetSchema
+2020/06/15 02:10:12 [TRACE] GRPCProvider: Configure
+2020/06/15 02:10:12 [TRACE] [walkApply] Exiting eval tree: provider.store
+2020/06/15 02:10:12 [TRACE] vertex "provider.store": visit complete
+2020/06/15 02:10:12 [TRACE] dag/walk: visiting "store_movies.saw (prepare state)"
+2020/06/15 02:10:12 [TRACE] vertex "store_movies.saw (prepare state)": starting visit (*terraform.NodeApplyableResource)
+2020/06/15 02:10:12 [TRACE] vertex "store_movies.saw (prepare state)": evaluating
+2020/06/15 02:10:12 [TRACE] [walkApply] Entering eval tree: store_movies.saw (prepare state)
+2020/06/15 02:10:12 [TRACE] <root>: eval: *terraform.EvalWriteResourceState
+2020/06/15 02:10:12 [TRACE] [walkApply] Exiting eval tree: store_movies.saw (prepare state)
+2020/06/15 02:10:12 [TRACE] vertex "store_movies.saw (prepare state)": visit complete
+2020/06/15 02:10:12 [TRACE] dag/walk: visiting "store_movies.saw"
+2020/06/15 02:10:12 [TRACE] vertex "store_movies.saw": starting visit (*terraform.NodeApplyableResourceInstance)
+2020/06/15 02:10:12 [TRACE] vertex "store_movies.saw": evaluating
+2020/06/15 02:10:12 [TRACE] [walkApply] Entering eval tree: store_movies.saw
+2020/06/15 02:10:12 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/06/15 02:10:12 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/06/15 02:10:12 [TRACE] <root>: eval: *terraform.EvalReadDiff
+2020/06/15 02:10:12 [TRACE] EvalReadDiff: Read Create change from plan for store_movies.saw
+2020/06/15 02:10:12 [TRACE] <root>: eval: *terraform.EvalIf
+2020/06/15 02:10:12 [TRACE] <root>: eval: terraform.EvalNoop
+2020/06/15 02:10:12 [TRACE] <root>: eval: *terraform.EvalIf
+2020/06/15 02:10:12 [TRACE] <root>: eval: *terraform.EvalReadState
+2020/06/15 02:10:12 [TRACE] EvalReadState: reading state for store_movies.saw
+2020/06/15 02:10:12 [TRACE] EvalReadState: no state present for store_movies.saw
+2020/06/15 02:10:12 [TRACE] <root>: eval: *terraform.EvalReadDiff
+2020/06/15 02:10:12 [TRACE] EvalReadDiff: Read Create change from plan for store_movies.saw
+2020/06/15 02:10:12 [TRACE] <root>: eval: *terraform.EvalDiff
+2020/06/15 02:10:12 [TRACE] Re-validating config for "store_movies.saw"
+2020/06/15 02:10:12 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/06/15 02:10:12 [TRACE] GRPCProvider: PlanResourceChange
+2020/06/15 02:10:12 [TRACE] <root>: eval: *terraform.EvalCheckPlannedChange
+2020/06/15 02:10:12 [TRACE] EvalCheckPlannedChange: Verifying that actual change (action Create) matches planned change (action Create)
+2020/06/15 02:10:12 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/06/15 02:10:12 [TRACE] <root>: eval: *terraform.EvalReadState
+2020/06/15 02:10:12 [TRACE] EvalReadState: reading state for store_movies.saw
+2020/06/15 02:10:12 [TRACE] EvalReadState: no state present for store_movies.saw
+2020/06/15 02:10:12 [TRACE] <root>: eval: *terraform.EvalReduceDiff
+2020/06/15 02:10:12 [TRACE] <root>: eval: *terraform.EvalIf
+2020/06/15 02:10:12 [TRACE] <root>: eval: terraform.EvalNoop
+2020/06/15 02:10:12 [TRACE] <root>: eval: *terraform.EvalApplyPre
+2020/06/15 02:10:12 [TRACE] <root>: eval: *terraform.EvalApply
+2020/06/15 02:10:12 [DEBUG] store_movies.saw: applying the planned Create change
+2020/06/15 02:10:12 [TRACE] GRPCProvider: ApplyResourceChange
+2020-06-15T02:10:12.556-0400 [DEBUG] plugin.terraform-provider-store: panic: interface conversion: interface {} is nil, not string
+2020-06-15T02:10:12.556-0400 [DEBUG] plugin.terraform-provider-store: 
+2020-06-15T02:10:12.556-0400 [DEBUG] plugin.terraform-provider-store: goroutine 25 [running]:
+2020-06-15T02:10:12.556-0400 [DEBUG] plugin.terraform-provider-store: github.com/milamice62/terraplugin/resources.expandGenre(0xc0001d42c0, 0x1, 0x1, 0x1aaae40, 0xc00020a120, 0x1)
+2020-06-15T02:10:12.556-0400 [DEBUG] plugin.terraform-provider-store: 	/Users/chrisy/Documents/GO/terraplugin/resources/resource_movies.go:84 +0x2ad
+2020-06-15T02:10:12.556-0400 [DEBUG] plugin.terraform-provider-store: github.com/milamice62/terraplugin/resources.createMovie(0xc000228ee0, 0x1c1b300, 0xc0001808d0, 0x2, 0x26ef7c0)
+2020-06-15T02:10:12.556-0400 [DEBUG] plugin.terraform-provider-store: 	/Users/chrisy/Documents/GO/terraplugin/resources/resource_movies.go:98 +0xa5
+2020-06-15T02:10:12.556-0400 [DEBUG] plugin.terraform-provider-store: github.com/hashicorp/terraform/helper/schema.(*Resource).Apply(0xc00022c380, 0xc000186d20, 0xc000659b40, 0x1c1b300, 0xc0001808d0, 0x1b28f01, 0xc00054b238, 0xc0001ce000)
+2020-06-15T02:10:12.556-0400 [DEBUG] plugin.terraform-provider-store: 	/Users/chrisy/go/pkg/mod/github.com/hashicorp/terraform@v0.12.26/helper/schema/resource.go:305 +0x365
+2020-06-15T02:10:12.556-0400 [DEBUG] plugin.terraform-provider-store: github.com/hashicorp/terraform/helper/schema.(*Provider).Apply(0xc00022c500, 0xc0001bda00, 0xc000186d20, 0xc000659b40, 0xc0001cc1a8, 0xc0001b22b8, 0x1b2afa0)
+2020-06-15T02:10:12.556-0400 [DEBUG] plugin.terraform-provider-store: 	/Users/chrisy/go/pkg/mod/github.com/hashicorp/terraform@v0.12.26/helper/schema/provider.go:289 +0x99
+2020-06-15T02:10:12.557-0400 [DEBUG] plugin.terraform-provider-store: github.com/hashicorp/terraform/helper/plugin.(*GRPCProviderServer).ApplyResourceChange(0xc00020e108, 0x1f65800, 0xc0001c30e0, 0xc0007d8cc0, 0xc00020e108, 0xc0001c30e0, 0xc0001a4b78)
+2020-06-15T02:10:12.557-0400 [DEBUG] plugin.terraform-provider-store: 	/Users/chrisy/go/pkg/mod/github.com/hashicorp/terraform@v0.12.26/helper/plugin/grpc_provider.go:885 +0x8c4
+2020-06-15T02:10:12.557-0400 [DEBUG] plugin.terraform-provider-store: github.com/hashicorp/terraform/internal/tfplugin5._Provider_ApplyResourceChange_Handler(0x1c45760, 0xc00020e108, 0x1f65800, 0xc0001c30e0, 0xc0007d8c60, 0x0, 0x1f65800, 0xc0001c30e0, 0xc0001c81e0, 0xe7)
+2020-06-15T02:10:12.557-0400 [DEBUG] plugin.terraform-provider-store: 	/Users/chrisy/go/pkg/mod/github.com/hashicorp/terraform@v0.12.26/internal/tfplugin5/tfplugin5.pb.go:3189 +0x217
+2020-06-15T02:10:12.557-0400 [DEBUG] plugin.terraform-provider-store: google.golang.org/grpc.(*Server).processUnaryRPC(0xc000802600, 0x1f70ba0, 0xc00078a780, 0xc0001bf100, 0xc0004f29f0, 0x26b5780, 0x0, 0x0, 0x0)
+2020-06-15T02:10:12.557-0400 [DEBUG] plugin.terraform-provider-store: 	/Users/chrisy/go/pkg/mod/google.golang.org/grpc@v1.27.1/server.go:1024 +0x501
+2020-06-15T02:10:12.557-0400 [DEBUG] plugin.terraform-provider-store: google.golang.org/grpc.(*Server).handleStream(0xc000802600, 0x1f70ba0, 0xc00078a780, 0xc0001bf100, 0x0)
+2020-06-15T02:10:12.557-0400 [DEBUG] plugin.terraform-provider-store: 	/Users/chrisy/go/pkg/mod/google.golang.org/grpc@v1.27.1/server.go:1313 +0xd3d
+2020-06-15T02:10:12.557-0400 [DEBUG] plugin.terraform-provider-store: google.golang.org/grpc.(*Server).serveStreams.func1.1(0xc0007961a0, 0xc000802600, 0x1f70ba0, 0xc00078a780, 0xc0001bf100)
+2020-06-15T02:10:12.557-0400 [DEBUG] plugin.terraform-provider-store: 	/Users/chrisy/go/pkg/mod/google.golang.org/grpc@v1.27.1/server.go:722 +0xa1
+2020-06-15T02:10:12.557-0400 [DEBUG] plugin.terraform-provider-store: created by google.golang.org/grpc.(*Server).serveStreams.func1
+2020-06-15T02:10:12.557-0400 [DEBUG] plugin.terraform-provider-store: 	/Users/chrisy/go/pkg/mod/google.golang.org/grpc@v1.27.1/server.go:720 +0xa1
+2020/06/15 02:10:12 [DEBUG] store_movies.saw: apply errored, but we're indicating that via the Error pointer rather than returning it: rpc error: code = Unavailable desc = transport is closing
+2020/06/15 02:10:12 [TRACE] <root>: eval: *terraform.EvalMaybeTainted
+2020/06/15 02:10:12 [TRACE] EvalMaybeTainted: store_movies.saw encountered an error during creation, so it is now marked as tainted
+2020/06/15 02:10:12 [TRACE] <root>: eval: *terraform.EvalWriteState
+2020/06/15 02:10:12 [TRACE] EvalWriteState: removing state object for store_movies.saw
+2020/06/15 02:10:12 [TRACE] <root>: eval: *terraform.EvalApplyProvisioners
+2020/06/15 02:10:12 [TRACE] EvalApplyProvisioners: store_movies.saw has no state, so skipping provisioners
+2020/06/15 02:10:12 [TRACE] <root>: eval: *terraform.EvalMaybeTainted
+2020/06/15 02:10:12 [TRACE] EvalMaybeTainted: store_movies.saw encountered an error during creation, so it is now marked as tainted
+2020/06/15 02:10:12 [TRACE] <root>: eval: *terraform.EvalWriteState
+2020/06/15 02:10:12 [TRACE] EvalWriteState: removing state object for store_movies.saw
+2020/06/15 02:10:12 [TRACE] <root>: eval: *terraform.EvalIf
+2020/06/15 02:10:12 [TRACE] <root>: eval: *terraform.EvalIf
+2020/06/15 02:10:12 [TRACE] <root>: eval: *terraform.EvalWriteDiff
+2020/06/15 02:10:12 [TRACE] <root>: eval: *terraform.EvalApplyPost
+2020/06/15 02:10:12 [ERROR] <root>: eval: *terraform.EvalApplyPost, err: rpc error: code = Unavailable desc = transport is closing
+2020/06/15 02:10:12 [ERROR] <root>: eval: *terraform.EvalSequence, err: rpc error: code = Unavailable desc = transport is closing
+2020/06/15 02:10:12 [TRACE] [walkApply] Exiting eval tree: store_movies.saw
+2020/06/15 02:10:12 [TRACE] vertex "store_movies.saw": visit complete
+2020/06/15 02:10:12 [TRACE] dag/walk: upstream of "provider.store (close)" errored, so skipping
+2020/06/15 02:10:12 [TRACE] dag/walk: upstream of "meta.count-boundary (EachMode fixup)" errored, so skipping
+2020/06/15 02:10:12 [TRACE] dag/walk: upstream of "root" errored, so skipping
+2020/06/15 02:10:12 [TRACE] statemgr.Filesystem: not making a backup, because the new snapshot is identical to the old
+2020/06/15 02:10:12 [TRACE] statemgr.Filesystem: no state changes since last snapshot
+2020/06/15 02:10:12 [TRACE] statemgr.Filesystem: writing snapshot at terraform.tfstate
+2020-06-15T02:10:12.559-0400 [DEBUG] plugin: plugin process exited: path=/Users/chrisy/Documents/GO/terraplugin/terraform-provider-store pid=91420 error="exit status 2"
+2020/06/15 02:10:12 [TRACE] statemgr.Filesystem: removing lock metadata file .terraform.tfstate.lock.info
+2020/06/15 02:10:12 [TRACE] statemgr.Filesystem: unlocking terraform.tfstate using fcntl flock
+2020-06-15T02:10:12.567-0400 [DEBUG] plugin: plugin exited

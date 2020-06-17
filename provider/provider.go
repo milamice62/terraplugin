@@ -4,6 +4,7 @@ import (
 	"github.com/hashicorp/terraform/helper/schema"
 	"github.com/hashicorp/terraform/terraform"
 	"github.com/milamice62/terraplugin/api/client"
+	"github.com/milamice62/terraplugin/resources"
 )
 
 func Provider() terraform.ResourceProvider {
@@ -26,8 +27,10 @@ func Provider() terraform.ResourceProvider {
 			},
 		},
 		ResourcesMap: map[string]*schema.Resource{
-			"movie_item":   resourceItem(),
-			"movie_genres": genreItem(),
+			"store_genres":    resources.GenreItem(),
+			"store_movies":    resources.MovieItem(),
+			"store_customers": resources.CustomerItem(),
+			"store_rentals":   resources.RentalItem(),
 		},
 		ConfigureFunc: providerConfigure,
 	}
