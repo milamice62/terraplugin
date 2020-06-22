@@ -23,20 +23,11 @@ provider "store" {
 #   phone = "123456789"
 # }
 
-resource "store_rentals" "myrental" {
-  customer {
-    id = "5ee998a7073cfb0d8696fec1"
-  }
-  movie {
-    id = "5ee6fe17de7e8d5eb0ae60ea"
-  }
-}
-
-# resource "example_item" "test" {
-#   name        = "this_is_an_item"
-#   description = "this is an item"
-#   tags = [
-#     "hello",
-#     "world"
-#   ]
+# resource "store_rentals" "myrental" {
+#   customer {
+#     id = "5ee998a7073cfb0d8696fec1"
+#   }
+#   movie {
+#     id = "5ee6fe17de7e8d5eb0ae60ea"
+#   }
 # }
