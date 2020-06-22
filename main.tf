@@ -4,8 +4,8 @@ provider "store" {
   token   = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWUwNWY3M2QyZWZhMmFlODU4MGY2Y2QiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE1OTE3NjI4MDN9.0tgg4WTMp67orDP_v5haxPYmN5NVjXIiyMMpYLNbspw"
 }
 
-# resource "store_genres" "horor" {
-#   name = "funny"
+# resource "store_genres" "kind" {
+#   name = "comedy"
 # }
 
 # resource "store_movies" "saw" {
