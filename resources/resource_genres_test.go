@@ -10,6 +10,50 @@ import (
 	"github.com/milamice62/terraplugin/api/client"
 )
 
+func Test_Genre_Init(t *testing.T) {
+	resource.Test(t, resource.TestCase{
+		PreCheck:     func() { testAccPreCheck(t) },
+		Providers:    testAccProviders,
+		CheckDestroy: testAccCheckGenreDestroy,
+		Steps: []resource.TestStep{
+			{
+				Config: testAccCheckGenreInit(), // equal to 'Terraform Apply'
+				Check: resource.ComposeTestCheckFunc(
+					testAccCheckExampleGenreExists("store_genres.kind"),
+					resource.TestCheckResourceAttr(
+						"store_genres.kind", "name", "comedy"),
+				),
+			},
+		},
+	})
+}
+
+func Test_Genre_Update(t *testing.T) {
+	resource.Test(t, resource.TestCase{
+		PreCheck:     func() { testAccPreCheck(t) },
+		Providers:    testAccProviders,
+		CheckDestroy: testAccCheckGenreDestroy,
+		Steps: []resource.TestStep{
+			{
+				Config: testAccCheckGenreInit(), // equal to 'Terraform Apply'
+				Check: resource.ComposeTestCheckFunc(
+					testAccCheckExampleGenreExists("store_genres.kind"),
+					resource.TestCheckResourceAttr(
+						"store_genres.kind", "name", "comedy"),
+				),
+			},
+			{
+				Config: testAccCheckGenreUpdate(), // equal to 'Terraform Apply'
+				Check: resource.ComposeTestCheckFunc(
+					testAccCheckExampleGenreExists("store_genres.kind"),
+					resource.TestCheckResourceAttr(
+						"store_genres.kind", "name", "drama"),
+				),
+			},
+		},
+	})
+}
+
 func testAccCheckGenreDestroy(s *terraform.State) error {
 	apiClient := testAccProvider.Meta().(*client.Client)
 
@@ -31,31 +75,6 @@ func testAccCheckGenreDestroy(s *terraform.State) error {
 
 	return nil
 }
-func Test_Genre_Basic(t *testing.T) {
-	resource.Test(t, resource.TestCase{
-		PreCheck:     func() { testAccPreCheck(t) },
-		Providers:    testAccProviders,
-		CheckDestroy: testAccCheckGenreDestroy,
-		Steps: []resource.TestStep{
-			{
-				Config: testAccCheckGenreBasic(), // equal to 'Terraform Apply'
-				Check: resource.ComposeTestCheckFunc(
-					testAccCheckExampleGenreExists("store_genres.kind"),
-					resource.TestCheckResourceAttr(
-						"store_genres.kind", "name", "comedy"),
-				),
-			},
-		},
-	})
-}
-
-func testAccCheckGenreBasic() string {
-	return fmt.Sprintf(`
-resource "store_genres" "kind" {
-  name = "comedy"
-}
-`)
-}
 
 func testAccCheckExampleGenreExists(resource string) resource.TestCheckFunc {
 	return func(state *terraform.State) error {
@@ -74,4 +93,20 @@ func testAccCheckExampleGenreExists(resource string) resource.TestCheckFunc {
 		}
 		return nil
 	}
+}
+
+func testAccCheckGenreInit() string {
+	return fmt.Sprintf(`
+resource "store_genres" "kind" {
+  name = "comedy"
+}
+`)
+}
+
+func testAccCheckGenreUpdate() string {
+	return fmt.Sprintf(`
+resource "store_genres" "kind" {
+  name = "drama"
+}
+`)
 }

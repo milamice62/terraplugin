@@ -11,15 +11,14 @@ provider "store" {
 # resource "store_movies" "saw" {
 #   title = "sawIII"
 #   genre {
-#     _id  = "5ee19f2a1363f7c0493761e9"
-#     name = "hhhhh"
+#     _id = "5ee19f2a1363f7c0493761e9"
 #   }
 #   stock      = 10
 #   daily_rate = 12.10
 # }
 
-# resource "store_customers" "cici" {
-#   name  = "selina"
+# resource "store_customers" "customer1" {
+#   name  = "foobar"
 #   phone = "123456789"
 # }
 

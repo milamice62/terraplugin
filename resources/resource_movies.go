@@ -28,11 +28,10 @@ func MovieItem() *schema.Resource {
 				Elem: &schema.Resource{
 					Schema: map[string]*schema.Schema{
 						"name": {
-							Type:         schema.TypeString,
-							Required:     true,
-							Description:  "The name of the genre",
-							ForceNew:     true,
-							ValidateFunc: validateName,
+							Type:        schema.TypeString,
+							Computed:    true,
+							Description: "The name of the genre",
+							ForceNew:    true,
 						},
 						"_id": {
 							Type:         schema.TypeString,
@@ -119,6 +118,9 @@ func createMovie(d *schema.ResourceData, m interface{}) error {
 	}
 
 	d.SetId(movie.MovieID)
+	gen := flattenGenre(&movie, d)
+	d.Set("genre", gen)
+
 	return nil
 }
 
